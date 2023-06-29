@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import styles from 'src/styles/Home.module.css';
-import '../app/globals.css';
-
+import '../app/globals.css'; 
 
 export default function Home() {
+  const products = [{id: 1,name: 7}, {id: 2,name: 3}, {id: 3,name: 15},
+                     {id: 4,name: 1}, {id: 5,name: 11}, {id: 6,name: 9} ];
   return (
     
     <div className={styles.container}>
@@ -11,54 +12,16 @@ export default function Home() {
         <h4 className={styles.title}>
           Sorting Algorithms
         </h4>
-
-
-        <div className={styles.grid}>
-          <a href="/" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        <br></br>
+        <div className={styles.dflex}>
+                {products && products.length>0 && 
+                products
+                .sort((a, b) => a.name - b.name)
+                .map(products => (
+                      <p key={products.id}> 
+                        {products.name},
+                      </p> 
+                ))}
         </div>
       </main>
 

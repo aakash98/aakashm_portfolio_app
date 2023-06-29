@@ -27,25 +27,27 @@ export default function Home() {
           </Link>
 
 
-          <Link className={styles.card} href="/movies"><h2>My Experiences</h2>
+          {/* <Link className={styles.card} href="/movies"><h2>Latest Movies</h2> */}
+          <Link className={styles.card} href=""><h2>Latest Movies</h2>
             <br/>
             <p>Go to this page to see the latest Movie Lists</p>
           </Link>
           
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link className={styles.card} href="/experiences"><h2>My Contact</h2>
+            <br/>
+            <p>Go to this page to Contact Me</p>
+          </Link>
+
+          <Link className={styles.card} href="/sorting"><h2>Sorting</h2>
+            <br/>
+            <p>Go to this page to learn about Sorting Algorithm</p>
+          </Link>
+
+          <Link className={styles.card} href="/experiences"><h2>My Experiences</h2>
+            <br/>
+            <p>Go to this page to learn about my Experiences</p>
+          </Link>
+
         </div>
       </main>
 
