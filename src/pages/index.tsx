@@ -1,33 +1,13 @@
 import Image from 'next/image';
 import styles from 'src/styles/Home.module.css';
+import '../app/globals.css';
+
 import Link from "next/link";
 
 export default function Home() {
   return (
     
     <div className={styles.container}>
-      <header className='w-full px-32 py-8 font-medium'>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contacts</Link>
-          <Link href="/">Experiences</Link>
-          <Link href="/">Home</Link>
-        </nav>
-        <div className='flex items-center justify-center mt-2'>
-            <Link href="/"
-            className='w-16 h-16 bg-dark text-light flex items-center justify-center'>KJ</Link>
-        </div>
-        <nav>
-          <Link href="/">GitHub</Link>
-          <Link href="/">LinkedIn</Link>
-          <Link href="/">Contacts</Link>
-          <Link href="/">Experiences</Link>
-          <Link href="/">Home</Link>
-        </nav>
-
-
-      </header>
       <main className={styles.main}>
         <h4 className={styles.title}>
           My <a href="https://nextjs.org">Next.js</a> Application
