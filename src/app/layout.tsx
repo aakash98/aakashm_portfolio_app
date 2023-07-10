@@ -1,6 +1,5 @@
-'use client'
 import './globals.css'
-import Navbar from './Navbar';
+import '@/styles/styles.css'
 
 export const metadata = {
   title: 'KJ Next App',
@@ -14,7 +13,7 @@ export default function RootLayout({
 }) {
   return (      
     <html lang="en">
-      <body><Navbar></Navbar>{children}</body>
+      <body>{children}</body>
 
     </html>
   )
