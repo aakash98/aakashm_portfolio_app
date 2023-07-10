@@ -6,13 +6,13 @@ import { PositionType } from "@/util/ExperienceModel"
 
 const Details = ({position, company, time, work}:{position: string, company: string, time:string, work: string}) =>
 {
-  return <li>
+  return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col items-center'>
       <div>
-        <h3>{position}&nbsp;<a href={company}>@{company}</a></h3>
-        <span>
+        <h3 className='capitalize font-bold text-2xl'>{position}&nbsp;<a href={company}>@{company}</a></h3>
+        <span className='capitalize font-medium text-dark'>
          {time}
         </span>
-        <p>{work}</p>
+        <p className='font-medium w-full'>{work}</p>
       </div>
     </li>
 }
@@ -30,6 +30,7 @@ export default function Experiences() {
           <div className={styles.expsection}>
           <h2></h2>
             <Image
+              className="my-8 first:mt-0 last:mb-0 flex-col"
               src="/ars.jpg"
               width={50}
               height={50}
@@ -38,8 +39,8 @@ export default function Experiences() {
             <Details position="Software Developer" company="Alpha Reds Solutions" time="2019-2022" work="Maintaining Multiple CMS Applications."/>
           </div>
           <div className={styles.expsection}>
-          <h2>Micron Technology</h2>
             <Image
+              className="my-8 first:mt-0 last:mb-0 flex-col"
               src="/micron.png"
               width={50}
               height={50}
