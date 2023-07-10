@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from 'src/styles/Home.module.css';
 import '../app/globals.css';
+import { PositionType } from "@/util/ExperienceModel"
 
 export default function Experiences() {
   return (
@@ -12,7 +13,7 @@ export default function Experiences() {
         </h4>
 
         <div className={styles.grid}>
-          
+
             <h2>Alpha Reds Solutions</h2>
             <Image
               src="/ars.jpg"
