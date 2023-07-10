@@ -24,13 +24,13 @@ class Navbar extends Component {
           whileHover={{y:-2}}
           whileTap={{scale:0.9}}
           className="w-6 mx-3">
-            <GithubSvg className={null} />
+            <GithubSvg className='' />
           </motion.a>
           <motion.a href="https://www.linkedin.com/in/wong-kai-jeng/" target={"_blank"}
           whileHover={{y:-2}}
           whileTap={{scale:0.9}}
           className="w-6 ml-3">
-            <LinkedInSvg className={null} />
+            <LinkedInSvg className='' />
           </motion.a>
        </nav>
 
