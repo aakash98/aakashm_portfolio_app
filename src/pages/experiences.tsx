@@ -11,14 +11,24 @@ export default function Experiences() {
           My <a href="https://nextjs.org">Next.js</a> Application
         </h4>
 
-        <p className={styles.description}>
-        </p>
-
         <div className={styles.grid}>
-          <a href="/" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
+          
+            <h2>Alpha Reds Solutions</h2>
+            <Image
+              src="/ars.jpg"
+              width={50}
+              height={50}
+              alt="ars"
+            />
+
+
+
             <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          
+
+
+        </div>
+        <div>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
