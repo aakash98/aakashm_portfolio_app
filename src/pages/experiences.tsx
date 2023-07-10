@@ -1,7 +1,21 @@
 import Image from 'next/image';
 import styles from 'src/styles/Home.module.css';
+import React from 'react';
 import '../app/globals.css';
 import { PositionType } from "@/util/ExperienceModel"
+
+const Details = ({position, company, time, work}:{position: string, company: string, time:string, work: string}) =>
+{
+  return <li>
+      <div>
+        <h3>{position}&nbsp;<a href={company}>@{company}</a></h3>
+        <span>
+         {time}
+        </span>
+        <p>{work}</p>
+      </div>
+    </li>
+}
 
 export default function Experiences() {
   return (
@@ -12,34 +26,27 @@ export default function Experiences() {
           Experience
         </h4>
 
-        <div className={styles.grid}>
+        <div className='w-[75%] mx-auto relative'>
           <div className={styles.expsection}>
-          <h2>Alpha Reds Solutions</h2>
+          <h2></h2>
             <Image
               src="/ars.jpg"
               width={50}
               height={50}
               alt="ars"
-            />
-
-
-
-            <p>Find in-depth information about Next.js features and API.</p>
+            />          
+            <Details position="Software Developer" company="Alpha Reds Solutions" time="2019-2022" work="Maintaining Multiple CMS Applications."/>
           </div>
           <div className={styles.expsection}>
           <h2>Micron Technology</h2>
             <Image
-              src="/ars.jpg"
+              src="/micron.png"
               width={50}
               height={50}
-              alt="ars"
-            />
-
-
-
-            <p>Find in-depth information about Next.js features and API.</p>
+              alt="micron"
+            />          
+            <Details position="Software Engineer" company="Micron Technology" time="2022-Current" work="Maintaining the Micron Backend Advanced Scheduler (BEMAS) Application."/>
           </div>
-
         </div>
         
 
