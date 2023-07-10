@@ -9,7 +9,6 @@ import '../app/globals.css';
 
 export default async function Movies() { 
     const movies: MoviesType = await getMovies();
-    alert(movies);
     console.log(movies);
      return (
         <div className={styles.container}>

@@ -33,3 +33,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## kj-next-app
 
+This NextJS Application consists of my about, contacts and some introduction to NextJS functionalities
