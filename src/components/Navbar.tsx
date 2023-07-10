@@ -12,9 +12,9 @@ class Navbar extends Component {
         
         <nav>
         <Link href="/" className='mr-4'>Home</Link>
-        <Link href="/About" className='mr-4'>About</Link>
-        <Link href="/Contact" className='mr-4'>Contacts</Link>
-        <Link href="/Experiences" className='mr-4'>Experiences</Link>
+        <Link href="/about" className='mr-4'>About</Link>
+        <Link href="/contact" className='mr-4'>Contacts</Link>
+        <Link href="/experiences" className='mr-4'>Experiences</Link>
         </nav>
 
        <Logo />
