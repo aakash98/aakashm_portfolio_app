@@ -26,14 +26,12 @@ export default function Home() {
             <p>Go to this page to learn about my Experiences</p>
           </Link>
 
-
-          {/* <Link className={styles.card} href="/movies"><h2>Latest Movies</h2> */}
           <Link className={styles.card} href=""><h2>Latest Movies</h2>
             <br/>
             <p>Go to this page to see the latest Movie Lists</p>
           </Link>
           
-          <Link className={styles.card} href="/experiences"><h2>My Contact</h2>
+          <Link className={styles.card} href="/contact"><h2>My Contact</h2>
             <br/>
             <p>Go to this page to Contact Me</p>
           </Link>
@@ -43,9 +41,9 @@ export default function Home() {
             <p>Go to this page to learn about Sorting Algorithm</p>
           </Link>
 
-          <Link className={styles.card} href="/experiences"><h2>My Experiences</h2>
+          <Link className={styles.card} href="https://kaijeng.netlify.app/"><h2>My Netlify App</h2>
             <br/>
-            <p>Go to this page to learn about my Experiences</p>
+            <p>Go to this page to learn about my Netlify Portfolio</p>
           </Link>
 
         </div>

@@ -13,8 +13,8 @@ export default function Experiences() {
         </h4>
 
         <div className={styles.grid}>
-
-            <h2>Alpha Reds Solutions</h2>
+          <div className={styles.expsection}>
+          <h2>Alpha Reds Solutions</h2>
             <Image
               src="/ars.jpg"
               width={50}
@@ -25,6 +25,21 @@ export default function Experiences() {
 
 
             <p>Find in-depth information about Next.js features and API.</p>
+          </div>
+          <div className={styles.expsection}>
+          <h2>Micron Technology</h2>
+            <Image
+              src="/ars.jpg"
+              width={50}
+              height={50}
+              alt="ars"
+            />
+
+
+
+            <p>Find in-depth information about Next.js features and API.</p>
+          </div>
+
         </div>
         
 
