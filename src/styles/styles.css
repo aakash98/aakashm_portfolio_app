@@ -105,7 +105,9 @@
     height: 1em;
     margin-left: 0.5rem;
   }
-
+  .myfooter {
+    padding: 0 2rem;
+  }
   .expsection {
     margin: 1rem;
     padding: 1.5rem;
