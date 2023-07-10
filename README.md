@@ -35,4 +35,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 This NextJS Application consists of my about, contacts and some introduction to NextJS functionalities
 
-Vercel URL: [KJ Next App](https://kaijeng-next-portfolio.vercel.app/)
+Vercel URL: [KJ Next App](https://kaijeng-nextportfolio.vercel.app/)
