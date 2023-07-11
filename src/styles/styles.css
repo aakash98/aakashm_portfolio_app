@@ -12,7 +12,15 @@
     justify-content: center;
     align-items: center;
   }
-
+  .layout
+  {
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 245 245/var(--tw-bg-opacity));
+  }
+  .layoutwhite
+  {
+    background-color: white !important;
+  }
   .footer {
     display: flex;
     flex: 1;

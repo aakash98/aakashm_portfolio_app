@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { Component } from 'react';
 import Logo from '../components/Logo';
 import {GithubSvg, LinkedInSvg} from './Icons';
@@ -6,6 +7,7 @@ import {motion} from 'framer-motion';
 
 
 class Navbar extends Component {
+
   render () {
     return (
       <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>

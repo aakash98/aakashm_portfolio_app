@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AnimatedText from '@/components/AnimatedText'
 import styles from 'src/styles/Home.module.css';
 import React from 'react';
 import '../app/globals.css';
@@ -24,9 +25,8 @@ export default function Experiences() {
     <div className='layoutwhite'>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h4 className={styles.title}>
-            Experience
-          </h4>
+        <AnimatedText text="Experiences" className='!text-6xl' />
+
 
           <div className='w-[75%] mx-auto relative'>
             <div className="absolute left-8 top-0 h-full bg-dark origin-top">
