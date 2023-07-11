@@ -4,6 +4,8 @@ import styles from 'src/styles/Home.module.css';
 import '../app/globals.css';
 import Link from "next/link";
 import Layout from '@/components/Layout';
+import {DownloadSvg} from '../components/Icons';
+
 import profilePic from "../../public/kj_80.webp";
 
 
@@ -27,8 +29,11 @@ export default function Home() {
                 className="flex items-center bg-dark text-light p-2.5 px-6
                 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                 border border-soldi border-transparent hover:border-dark
-                ">Resume</Link>
-                <Link href="mailto:kaijengre2@gmail.com">Email Me</Link>
+                "
+                download={false}>Resume <DownloadSvg className='w-6 ml-1'/></Link>
+                <Link href="mailto:kaijengre2@gmail.com"
+                className="ml-4 text-lg font-medium capitalize text-dark"
+                >Email Me</Link>
               </div>
             </div>
           </div>
