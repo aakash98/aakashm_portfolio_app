@@ -4,24 +4,18 @@ import '../app/globals.css';
 
 export default function Contact() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h4 className={styles.title}>
-        </h4>
+    <div className='layout'>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <h4 className={styles.title}>
+          </h4>
 
-        <p className={styles.description}>
-        </p>
-
-        <div className={styles.grid}>
-          
-        </div>
-      </main>
-
-
-
-
-
-
+          <div className={styles.grid}>
+            
+          </div>
+        </main>
+      </div>
     </div>
+
   );
 }

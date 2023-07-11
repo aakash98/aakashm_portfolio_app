@@ -6,6 +6,6 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => (
-  <div className="layout">{children}</div>
+  <div className="layouthome">{children}</div>
 )
 export default Layout

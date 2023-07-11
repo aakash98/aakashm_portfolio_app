@@ -22,7 +22,7 @@ const Details = ({position, company, companysite, time, work}:{position: string,
 
 export default function Experiences() {
   return (
-    <div className='layoutwhite'>
+    <div className=''>
       <div className={styles.container}>
         <main className={styles.main}>
         <AnimatedText text="Experiences" className='!text-6xl' />

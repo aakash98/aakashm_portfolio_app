@@ -4,7 +4,7 @@ import styles from 'src/styles/Home.module.css';
 import '../app/globals.css';
 import Link from "next/link";
 import Layout from '@/components/Layout';
-import profilePic from "../../public/my_pic.jpg";
+import profilePic from "../../public/kj_80.webp";
 
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <Layout >  
           <div className="flex items-center text-dark w-full min-h-screen">
             <div className='w-1/2'>
-              <Image src={profilePic} alt="Kaijeng" className='w-full h-auto'></Image>
+              <Image src={profilePic} alt="Kaijeng" className='w-full h-auto br-5'></Image>
             </div>
             <div className='w-1/2 flex flex-col items-center self-center'>
               <AnimatedText text="Turning Ideas into Code" className='!text-6xl !text-left' />
