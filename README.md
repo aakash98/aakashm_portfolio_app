@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Personal Portfolio built with [Next.js](https://nextjs.org/).
 
 ## Getting Started
 
@@ -16,14 +16,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## kj-next-app
 
-To learn more about Next.js, take a look at the following resources:
+This NextJS Application consists of my about, contacts and some introduction to NextJS functionalities
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Vercel URL: [KJ Next App](https://kaijeng-nextportfolio.vercel.app/)
 
 ## Deploy on Vercel
 
@@ -31,8 +28,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## kj-next-app
-
-This NextJS Application consists of my about, contacts and some introduction to NextJS functionalities
-
-Vercel URL: [KJ Next App](https://kaijeng-nextportfolio.vercel.app/)

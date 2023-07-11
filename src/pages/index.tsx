@@ -22,6 +22,14 @@ export default function Home() {
               <p>
                 As a Software Engineer, I am dedicated to turn ideas into creative web applications. Explore my projects and experiences, showcasing my various fields in Software Development.
               </p>
+              <div className='flex items-center self-start mt-2'>
+                <Link href="/Resume.pdf" target={"blank"}
+                className="flex items-center bg-dark text-light p-2.5 px-6
+                rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
+                border border-soldi border-transparent hover:border-dark
+                ">Resume</Link>
+                <Link href="mailto:kaijengre2@gmail.com">Email Me</Link>
+              </div>
             </div>
           </div>
         </Layout>
