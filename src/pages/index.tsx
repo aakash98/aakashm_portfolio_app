@@ -1,18 +1,25 @@
 import Image from 'next/image';
+import Link from "next/link";
+import Head from 'next/head';
+import Layout from '@/components/Layout';
+import {DownloadSvg} from '../components/Icons';
+import profilePic from "../../public/kj_80.webp";
 import AnimatedText from '@/components/AnimatedText'
 import styles from 'src/styles/Home.module.css';
 import '../app/globals.css';
-import Link from "next/link";
-import Layout from '@/components/Layout';
-import {DownloadSvg} from '../components/Icons';
-
-import profilePic from "../../public/kj_80.webp";
+import Favicon from '../components/Favicon';
 
 
 export default function Home() {
   return (
     
     <div className='{styles.container}'>
+      <Head>
+        <title>Kai Jeng | Portfolio</title>
+        <meta name="description" content="index"></meta>
+        <Favicon/>
+
+      </Head>
       <main className='flex items-center text-dark w-full min-h-screen xl:p-24 '>
         <Layout >  
           <div className="flex items-center text-dark w-full min-h-screen">

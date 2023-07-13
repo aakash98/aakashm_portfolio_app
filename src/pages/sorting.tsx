@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText'
 import styles from 'src/styles/Home.module.css';
 import '../app/globals.css'; 
@@ -8,6 +9,10 @@ export default function Home() {
                      {id: 4,name: 1}, {id: 5,name: 11}, {id: 6,name: 9} ];
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Kai Jeng | Sorting</title>
+        <meta name="description" content="index"></meta>
+      </Head>
       <main className={styles.main}>
         <AnimatedText text="Sorting Algorithms" className='!text-6xl' />
         <br></br>
