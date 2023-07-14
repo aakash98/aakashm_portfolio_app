@@ -12,13 +12,11 @@ import Favicon from '../components/Favicon';
 
 export default function Home() {
   return (
-    
     <div className='{styles.container}'>
       <Head>
         <title>Kai Jeng | Portfolio</title>
         <meta name="description" content="index"></meta>
         <Favicon/>
-
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen xl:p-24 '>
         <Layout >  

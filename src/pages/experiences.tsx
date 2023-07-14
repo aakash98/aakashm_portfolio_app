@@ -6,7 +6,6 @@ import React from 'react';
 import {motion, useScroll} from "framer-motion";
 import '../app/globals.css';
 import { PositionType } from "@/util/ExperienceModel"
-import Circle from '@/components/Circle';
 
 const Details = ({position, company, companysite, time, work}:{position: string, company: string, companysite: string, time:string, work: string}) =>
 {
@@ -26,7 +25,6 @@ const Details = ({position, company, companysite, time, work}:{position: string,
 const EducationDetails = ({course, institution, time, sidecourse}:{course: string, institution: string, time:string, sidecourse: string}) =>
 {
   return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
-    <Circle />
       <div>
         <Head>
           <title>Kai Jeng | Experiences</title>
@@ -51,7 +49,7 @@ export default function Experiences() {
         <main className={styles.main}>
         <AnimatedText text="Experiences" className='!text-6xl' />
           <div className='w-[75%] mx-auto relative'>
-            <div className="absolute left-8 top-0 h-full bg-dark origin-top">
+          <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
               <Image
                 className="my-8 first:mt-0 last:mb-0 flex-col"
                 src="/ars.jpg"
@@ -64,8 +62,8 @@ export default function Experiences() {
               <Image
                 className="my-8 first:mt-0 last:mb-0 flex-col"
                 src="/micron.png"
-                width={50}
-                height={50}
+                width={75}
+                height={75}
                 alt="micron"
               />          
               <Details position="Software Engineer" company="Micron Technology" companysite="https://www.micron.com/" time="2022-Current" work="Maintaining the Micron Backend Advanced Scheduler (BEMAS) Application which focuses on Planning and Scheduling ."/>
@@ -75,8 +73,16 @@ export default function Experiences() {
 
         <main className={styles.main}>
         <AnimatedText text="Education" className='!text-6xl' />
-        <div className='w-[75%] mx-auto relative'>
-          <div className="absolute left-8 top-0 h-full bg-dark origin-top">
+
+        <div className='w-[75%] mx-auto relative '>         
+          <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+          <Image
+                className="my-8 first:mt-0 last:mb-0 flex-col"
+                src="/monash.png"
+                width={50}
+                height={50}
+                alt="monash"
+              />          
             <EducationDetails course="Bachelor of Computer Science" institution="Monash University" time="2015-2018" sidecourse="Minoring in Data Science"/>
           </div>  
         </div>  
