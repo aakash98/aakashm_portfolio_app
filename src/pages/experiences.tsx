@@ -29,10 +29,6 @@ const EducationDetails = ({course, institution, time, sidecourse, sidecourse2, s
 {
   return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
       <div>
-        <Head>
-          <title>Kai Jeng | Experiences</title>
-          <meta name="description" content="index"></meta>
-        </Head>
         <h3 className='capitalize font-bold text-2xl'>
           {course}&nbsp;<br>
           </br>{institution}
