@@ -59,9 +59,9 @@ export default function Home() {
           <p>Go to this page to learn about my Experiences</p>
         </Link>
 
-        <Link className={styles.card} href=""><h2>Latest Movies</h2>
+        <Link className={styles.card} href="/certifications"><h2>My Certifications</h2>
           <br />
-          <p>Go to this page to see the latest Movie Lists</p>
+          <p>Go to this page to check out my Certifications</p>
         </Link>
 
         <Link className={styles.card} href="/contact"><h2>My Contact</h2>
