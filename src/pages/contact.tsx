@@ -5,6 +5,20 @@ import {motion} from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import '../app/globals.css';
 import {GithubSvg, LinkedInSvg} from '../components/Icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+
+const phoneno = '017-5597576';
+const mailaddress = 'kaijengre2@gmail.com';
+
+const fadein = {
+  initial:{
+      opacity:0,
+  },
+  animate:{
+      opacity:1,
+  }
+}
 
 export default function Contact() {
   return (
@@ -23,7 +37,6 @@ export default function Contact() {
                   <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Get in Touch</h2>
                 </div>
               </div>
-              
           </div>
           <div className="z-0 inline-block lg:p-16 sm:p-8">
             <div className="flex justify-between float-left">
@@ -33,7 +46,11 @@ export default function Contact() {
               className="w-8 mx-3">
                 <GithubSvg className='w-8 mx-3' />
               </motion.a>
-              <a className="github" href="https://github.com/KyleWong613/" target="_blank">KyleWong613</a>
+              <motion.a className="github" href="https://github.com/KyleWong613/" target="_blank"
+                variants={fadein}
+                initial="initial"
+                animate="animate"
+              >KyleWong613</motion.a>
             </div>
             <br></br>
             <br></br>
@@ -44,10 +61,38 @@ export default function Contact() {
               className="w-8 mx-3">
                 <LinkedInSvg className='w-8 mx-3' />
               </motion.a> 
-              <a className="linkedin " href="https://www.linkedin.com/in/wong-kai-jeng/" target="_blank">LinkedIn</a>
+              <motion.a className="linkedin" href="https://www.linkedin.com/in/wong-kai-jeng/" target="_blank"
+              variants={fadein}
+              initial="initial"
+              animate="animate">LinkedIn</motion.a>
+            </div>
+            <br></br>
+            <br></br>
+            <div className="flex justify-between float-left">          
+              <FontAwesomeIcon icon={faPhone}  
+              className="w-8 mx-3" />
+              <motion.a className="phone" href={`tel:${phoneno}`} target="_blank"
+              variants={fadein}
+              initial="initial"
+              animate="animate">017-5597576</motion.a>
+            </div>
+            <br></br>
+            <br></br>
+            <div className="flex justify-between float-left">          
+              <FontAwesomeIcon icon={faEnvelope}  
+              className="w-8 mx-3" />
+              <motion.a className="mail" href={`mailto:${mailaddress}`} target="_blank"
+              variants={fadein}
+              initial="initial"
+              animate="animate">kaijengre2@gmail.com</motion.a>
             </div>
           </div>
-              
+
+
+
+          <div className="z-0 inline-block lg:p-16 sm:p-8">
+            
+          </div>
         </main>
       </div>
     </div>
