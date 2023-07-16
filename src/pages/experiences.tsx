@@ -80,23 +80,25 @@ export default function Experiences() {
         </main>
 
         <main className={styles.main}>
-        <AnimatedText text="Education" className='!text-6xl' />
-
-        <div className='w-[75%] mx-auto relative '>         
-          <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-          <Image
-                className="my-8 first:mt-0 last:mb-0 flex-col"
-                src="/monash.png"
-                width={50}
-                height={50}
-                alt="monash"
-              />          
-            <EducationDetails course="Bachelor of Computer Science" institution="Monash University" time="2015-2018" 
-            sidecourse="Minoring in Data Science"
-            sidecourse2="Data Analytics"
-            sidecourse3="Algorithms and Data Structures"/>
+          <div className='my-10'>
+          <AnimatedText text="Education" className='!text-6xl' />
+            <div className='w-[75%] mx-auto relative '>         
+              <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+              <Image
+                    className="my-8 first:mt-0 last:mb-0 flex-col"
+                    src="/monash.png"
+                    width={50}
+                    height={50}
+                    alt="monash"
+                  />          
+                <EducationDetails course="Bachelor of Computer Science" institution="Monash University" time="2015-2018" 
+                sidecourse="Data Analytics"
+                sidecourse2="Modelling for Data Analysisa"
+                sidecourse3="Algorithms and Data Structures"/>
+                </div>  
             </div>  
-        </div>  
+          </div>
+        
         </main>
       </div>
     </div>
