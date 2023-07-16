@@ -24,7 +24,7 @@ const Details = ({position, company, companysite, time, work, work2, work3}:{pos
     </li>
 }
 
-const EducationDetails = ({course, institution, time, sidecourse}:{course: string, institution: string, time:string, sidecourse: string, sidecourse2: string, sidecourse3: string}) =>
+const EducationDetails = ({course, institution, time, sidecourse, sidecourse2, sidecourse3}:{course: string, institution: string, time:string, sidecourse: string, sidecourse2: string, sidecourse3: string}) =>
 {
   return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
       <div>
@@ -40,6 +40,7 @@ const EducationDetails = ({course, institution, time, sidecourse}:{course: strin
           {time}
         </span>
         <p className='font-medium w-full'>{sidecourse}</p>
+        <p className='font-medium w-full'>{sidecourse2}</p>
       </div>
     </li>
 }
@@ -93,8 +94,8 @@ export default function Experiences() {
                   />          
                 <EducationDetails course="Bachelor of Computer Science" institution="Monash University" time="2015-2018" 
                 sidecourse="Data Analytics"
-                sidecourse2="Modelling for Data Analysisa"
-                sidecourse3="Algorithms and Data Structures"/>
+                sidecourse3="Modelling for Data Analysis"
+                sidecourse2="Algorithms and Data Structures"/>
                 </div>  
             </div>  
           </div>
