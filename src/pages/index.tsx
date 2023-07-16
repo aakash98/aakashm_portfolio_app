@@ -22,7 +22,10 @@ export default function Home() {
         <Layout >  
           <div className="flex items-center text-dark w-full min-h-screen">
             <div className='w-1/2'>
-              <Image src={profilePic} alt="Kaijeng" className='w-full h-auto br-5'></Image>
+              <Image src={profilePic} alt="Kaijeng" className='w-full h-auto br-5'
+              priority sizes="(max-width: 768px) 100vw
+                              (max-width: 1200px) 50vw
+                              50vw"></Image>
             </div>
             <div className='w-1/2 flex flex-col items-center self-center'>
               <AnimatedText text="Turning Ideas into Code" className='!text-6xl !text-left' />

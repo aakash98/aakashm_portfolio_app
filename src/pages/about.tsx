@@ -20,10 +20,12 @@ export default function About() {
               <AnimatedText text="About Me" className='!text-6xl' />
               <div className="grid w-full grid-cols-8 gap-16">
                 <div className="col-span-3 flex flex-col items-start justify-start">
-                  <h2 className="mb-4 text-lg font-bold uppercase text-dark/75"> test</h2>
+                  <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Welcome to my portfolio!</h2>
                 </div>
               </div>
               <p className='font-medium'>Hi, I am Kai Jeng, I am just another Software Engineer
+
+              
               </p>
           </div>
           
