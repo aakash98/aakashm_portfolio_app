@@ -15,20 +15,22 @@ export default function About() {
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <div className="z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 lg:p-16 
-                          md:p-12 sm:p-8 pt-16">
               <AnimatedText text="About Me" className='!text-6xl' />
-              <div className="grid w-full grid-cols-8 gap-16">
-                <div className="col-span-3 flex flex-col items-start justify-start">
-                  <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Welcome to my portfolio!</h2>
-                </div>
-              </div>
-              <p className='font-medium'>Hi, I am Kai Jeng, I am just another Software Engineer
+              <div className='w-[75%] mx-auto relative'>
+                <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
 
-              
-              </p>
-          </div>
-          
+                  <div className="grid w-full grid-cols-8 gap-16">
+                    <div className="col-span-3 flex flex-col items-start justify-start">
+                      <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Welcome to my portfolio!</h2>
+                    </div>
+                  </div>
+                  <p className='font-medium'>Hi, I am Kai Jeng, I am just another Software Engineer
+
+                  
+                  </p>
+                </div>
+            </div>
+
               
         </main>
       </div>

@@ -32,39 +32,39 @@ export default function Certifications() {
         <main className={styles.main}>
         <AnimatedText text="Certifications" className='!text-6xl' />
           <div className='w-[75%] mx-auto relative'>
-          <div className="absolute left-12 top-0 h-full bg-dark origin-top md:p-12">
-              <Image
-                className="my-8 first:mt-0 last:mb-0 flex-col"
-                src="/iverson.jpg"
-                width={75}
-                height={75}
-                alt="ars"
-              />          
-              <CertDetails certname="Developing Cloud-Native Applications with Microservices Architectures" 
-               company="Iverson" certlink="https://imgbb.com/Np1jT65" 
-               date="July 2023"
-               details="Identify the proper frameworks and tools to build your microservices architecture"
-               details2="Understanding of OpenShift and Kubernetes"/>
-              <Image
-                className="my-8 first:mt-0 last:mb-0 flex-col"
-                src="/adobe-ex.png"
-                width={75}
-                height={75}
-                alt="adobe"
-              />          
-              <CertDetails certname="Create Web Experiences Using AEM" company="Adobe" certlink="https://ibb.co/xMGt7bx" 
-               date="Feb 2022"
-               details="Authoring concepts using the Adobe Experience Manager Touch UI"
-               details2="Creating and Editing responsive web pages with Experience Fragments"/>
-               </div>
+            <div className="absolute left-12 top-0 h-full bg-dark origin-top md:p-12">
+                <Image
+                  className="my-8 first:mt-0 last:mb-0 flex-col"
+                  src="/iverson.jpg"
+                  width={75}
+                  height={75}
+                  alt="ars"
+                />          
+                <CertDetails certname="Developing Cloud-Native Applications with Microservices Architectures" 
+                company="Iverson" certlink="https://imgbb.com/Np1jT65" 
+                date="July 2023"
+                details="Identify the proper frameworks and tools to build your microservices architecture"
+                details2="Understanding of OpenShift and Kubernetes"/>
+                <Image
+                  className="my-8 first:mt-0 last:mb-0 flex-col"
+                  src="/adobe-ex.png"
+                  width={75}
+                  height={75}
+                  alt="adobe"
+                />          
+                <CertDetails certname="Create Web Experiences Using AEM" company="Adobe" certlink="https://ibb.co/xMGt7bx" 
+                date="Feb 2022"
+                details="Authoring concepts using the Adobe Experience Manager Touch UI"
+                details2="Creating and Editing responsive web pages with Experience Fragments"/>
+            </div>
 
-               <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-                <motion.a href={`${githuburl}`} target="_blank">
-                  <h3 className='capitalize font-bold text-2xl'>
-                    Certificates List
-                  </h3>
-                </motion.a>
-               </div>
+            <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+            <motion.a href={`${githuburl}`} target="_blank">
+              <h3 className='capitalize font-bold text-2xl'>
+                Certificates List
+              </h3>
+            </motion.a>
+            </div>
 
           </div>
         </main>

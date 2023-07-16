@@ -5,7 +5,8 @@ import Logo from '../components/Logo';
 import {GithubSvg, LinkedInSvg} from './Icons';
 import {motion} from 'framer-motion';
 import Circle from '@/components/Circle';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCertificate} from '@fortawesome/free-solid-svg-icons';
 
 class Navbar extends Component {
 
@@ -19,10 +20,8 @@ class Navbar extends Component {
         <Link href="/contact" className='mr-4'>Contact</Link>
         <Link href="/experiences" className='mr-4'>Experiences</Link>
       </nav>
-        
-        <Circle />
-        <Logo />
-
+      <Circle />
+      <Logo />
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a href="https://github.com/KyleWong613" target={"_blank"}
         whileHover={{y:-2}}
@@ -35,6 +34,12 @@ class Navbar extends Component {
         whileTap={{scale:0.9}}
         className="w-6 ml-3">
           <LinkedInSvg className='w-full' />
+        </motion.a>
+        <motion.a href="/certifications"
+        whileHover={{y:-2}}
+        whileTap={{scale:0.9}}
+        className="w-6 mx-3">
+          <FontAwesomeIcon icon={faCertificate} className="w-8 mx-3" />
         </motion.a>
       </nav>
       </header>
