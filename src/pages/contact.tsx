@@ -7,9 +7,23 @@ import '../app/globals.css';
 import {GithubSvg, LinkedInSvg} from '../components/Icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
-const phoneno = '017-5597576';
-const mailaddress = 'kaijengre2@gmail.com';
+type Contact = {
+    github: string
+    linkedin: string
+    email: string
+    phone: string
+  }
+   
+  export const getStaticProps: GetStaticProps<{
+    contact: Contact
+  }> = async () => {
+    const res = await fetch('http://localhost:3000/api/contact')
+    const contact = await res.json()
+    return { props: { contact } }
+  }
+
 
 const fadein = {
   initial:{
@@ -20,7 +34,7 @@ const fadein = {
   }
 }
 
-export default function Contact() {
+export default function Contact({contact}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className='layout'>
       <Head>
@@ -40,13 +54,13 @@ export default function Contact() {
           </div>
           <div className="z-0 inline-block lg:p-16 sm:p-8">
             <div className="flex justify-between float-left">
-              <motion.a href="https://github.com/KyleWong613" target={"_blank"}
+              <motion.a href={contact.github} target={"_blank"}
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
               className="w-8 mx-3">
                 <GithubSvg className='w-8 mx-3' />
               </motion.a>
-              <motion.a className="github" href="https://github.com/KyleWong613/" target="_blank"
+              <motion.a className="github" href={contact.github} target="_blank"
                 variants={fadein}
                 initial="initial"
                 animate="animate"
@@ -55,13 +69,13 @@ export default function Contact() {
             <br></br>
             <br></br>
             <div className="flex justify-between float-left">
-              <motion.a href="https://www.linkedin.com/in/wong-kai-jeng/" target={"_blank"}
+              <motion.a href={contact.linkedin} target={"_blank"}
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
               className="w-8 mx-3">
                 <LinkedInSvg className='w-8 mx-3' />
               </motion.a> 
-              <motion.a className="linkedin" href="https://www.linkedin.com/in/wong-kai-jeng/" target="_blank"
+              <motion.a className="linkedin" href={contact.linkedin} target="_blank"
               variants={fadein}
               initial="initial"
               animate="animate">LinkedIn</motion.a>
@@ -71,20 +85,20 @@ export default function Contact() {
             <div className="flex justify-between float-left">          
               <FontAwesomeIcon icon={faPhone}  
               className="w-8 mx-3" />
-              <motion.a className="phone" href={`tel:${phoneno}`} target="_blank"
+              <motion.a className="phone" href={`tel:${contact.phone}`} target="_blank"
               variants={fadein}
               initial="initial"
-              animate="animate">017-5597576</motion.a>
+              animate="animate">{contact.phone}</motion.a>
             </div>
             <br></br>
             <br></br>
             <div className="flex justify-between float-left">          
               <FontAwesomeIcon icon={faEnvelope}  
               className="w-8 mx-3" />
-              <motion.a className="mail" href={`mailto:${mailaddress}`} target="_blank"
+              <motion.a className="mail" href={`mailto:${contact.email}`} target="_blank"
               variants={fadein}
               initial="initial"
-              animate="animate">kaijengre2@gmail.com</motion.a>
+              animate="animate">{contact.email}</motion.a>
             </div>
           </div>
 
