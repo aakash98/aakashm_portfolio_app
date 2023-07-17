@@ -10,26 +10,30 @@ import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
 type Contact = {
-    github: string
-    linkedin: string
-    email: string
-    phone: string
+  github: string
+  linkedin: string
+  email: string
+  phone: string
+}
+
+export const getStaticProps: GetStaticProps < {
+  contact: Contact
+} > = async () => {
+  const res = await fetch('http://localhost:3000/api/contact')
+  const contact = await res.json()
+  return {
+      props: {
+          contact
+      }
   }
-   
-  export const getStaticProps: GetStaticProps<{
-    contact: Contact
-  }> = async () => {
-    const res = await fetch('http://localhost:3000/api/contact')
-    const contact = await res.json()
-    return { props: { contact } }
-  }
+}
 
 const fadein = {
-  initial:{
-      opacity:0,
+  initial: {
+      opacity: 0,
   },
-  animate:{
-      opacity:1,
+  animate: {
+      opacity: 1,
   }
 }
 
@@ -42,65 +46,67 @@ export default function Contact({contact}: InferGetStaticPropsType<typeof getSta
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <div className="z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 lg:p-16 
-                          sm:p-8 pt-16">
-              <AnimatedText text="Contact Me" className='!text-6xl' />
-              <div className="grid w-full grid-cols-8 gap-16">
-                <div className="col-span-3 flex flex-col items-start justify-start">
-                  <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Get in Touch</h2>
+          <AnimatedText text="Contact Me" className='!text-6xl' />
+              <div className='w-[75%] mx-auto relative'>
+                <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+
+                  <div className="grid w-full grid-cols-8 gap-16">
+                    <div className="col-span-3 flex flex-col items-start justify-start">
+                      <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Get in Touch</h2>
+                      <div className="z-0 inline-block ">
+                        <div className="flex justify-between float-left">
+                          <motion.a href={contact.github} target={"_blank"}
+                          whileHover={{y:-2}}
+                          whileTap={{scale:0.9}}
+                          className="w-8 mx-3">
+                            <GithubSvg className='w-8 mx-3' />
+                          </motion.a>
+                          <motion.a className="github" href={contact.github} target="_blank"
+                            variants={fadein}
+                            initial="initial"
+                            animate="animate"
+                          >KyleWong613</motion.a>
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <div className="flex justify-between float-left">
+                          <motion.a href={contact.linkedin} target={"_blank"}
+                          whileHover={{y:-2}}
+                          whileTap={{scale:0.9}}
+                          className="w-8 mx-3">
+                            <LinkedInSvg className='w-8 mx-3' />
+                          </motion.a> 
+                          <motion.a className="linkedin" href={contact.linkedin} target="_blank"
+                          variants={fadein}
+                          initial="initial"
+                          animate="animate">LinkedIn</motion.a>
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <div className="flex justify-between float-left">          
+                          <FontAwesomeIcon icon={faPhone}  
+                          className="w-8 mx-3" />
+                          <motion.a className="phone" href={`tel:${contact.phone}`} target="_blank"
+                          variants={fadein}
+                          initial="initial"
+                          animate="animate">{contact.phone}</motion.a>
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <div className="flex justify-between float-left">          
+                          <FontAwesomeIcon icon={faEnvelope}  
+                          className="w-8 mx-3" />
+                          <motion.a className="mail" href={`mailto:${contact.email}`} target="_blank"
+                          variants={fadein}
+                          initial="initial"
+                          animate="animate">{contact.email}</motion.a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-          </div>
-          <div className="z-0 inline-block lg:p-16 sm:p-8">
-            <div className="flex justify-between float-left">
-              <motion.a href={contact.github} target={"_blank"}
-              whileHover={{y:-2}}
-              whileTap={{scale:0.9}}
-              className="w-8 mx-3">
-                <GithubSvg className='w-8 mx-3' />
-              </motion.a>
-              <motion.a className="github" href={contact.github} target="_blank"
-                variants={fadein}
-                initial="initial"
-                animate="animate"
-              >KyleWong613</motion.a>
-            </div>
-            <br></br>
-            <br></br>
-            <div className="flex justify-between float-left">
-              <motion.a href={contact.linkedin} target={"_blank"}
-              whileHover={{y:-2}}
-              whileTap={{scale:0.9}}
-              className="w-8 mx-3">
-                <LinkedInSvg className='w-8 mx-3' />
-              </motion.a> 
-              <motion.a className="linkedin" href={contact.linkedin} target="_blank"
-              variants={fadein}
-              initial="initial"
-              animate="animate">LinkedIn</motion.a>
-            </div>
-            <br></br>
-            <br></br>
-            <div className="flex justify-between float-left">          
-              <FontAwesomeIcon icon={faPhone}  
-              className="w-8 mx-3" />
-              <motion.a className="phone" href={`tel:${contact.phone}`} target="_blank"
-              variants={fadein}
-              initial="initial"
-              animate="animate">{contact.phone}</motion.a>
-            </div>
-            <br></br>
-            <br></br>
-            <div className="flex justify-between float-left">          
-              <FontAwesomeIcon icon={faEnvelope}  
-              className="w-8 mx-3" />
-              <motion.a className="mail" href={`mailto:${contact.email}`} target="_blank"
-              variants={fadein}
-              initial="initial"
-              animate="animate">{contact.email}</motion.a>
-            </div>
-          </div>
-
+         
 
 
           <div className="z-0 inline-block lg:p-16 sm:p-8">
