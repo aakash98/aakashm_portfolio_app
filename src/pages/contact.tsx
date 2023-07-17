@@ -24,7 +24,6 @@ type Contact = {
     return { props: { contact } }
   }
 
-
 const fadein = {
   initial:{
       opacity:0,
