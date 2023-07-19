@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import {useRouter} from 'next/router';
-import { loadContact } from '../util/loadContact'
+import { loadContactold } from '../pages/api/loadContact'
 
 type Contact = {
   github: string
@@ -19,7 +19,8 @@ type Contact = {
 }
 
 export async function getStaticProps() {
-  const contacts = await loadContact()
+
+  const contacts = await loadContactold()
   return {
       props: {
           contacts
