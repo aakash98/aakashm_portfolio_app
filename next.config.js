@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NEXT_API_URL === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
     assetPrefix: isProd ? '' : 'http://localhost:3000',

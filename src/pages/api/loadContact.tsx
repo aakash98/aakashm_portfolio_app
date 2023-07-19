@@ -9,7 +9,6 @@ export default async function handler(req: any, res: { status: (arg0: number) =>
     res.status(200).json(fileContent);
 }
 
-
 export async function loadContactold() {
     const env = process.env.NODE_ENV
     if (env == "production"){
