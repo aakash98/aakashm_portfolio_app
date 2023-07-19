@@ -16,10 +16,19 @@ type Contact = {
   phone: string
 }
 
+export function getServerSideProps(){
+  console.log(process.env.NEXT_API_URL);
+  return {
+    props: {}
+  }
+}
+
 export const getStaticProps: GetStaticProps < {
   contact: Contact
 } > = async () => {
-  const res = await fetch('http://localhost:3000/api/contact')
+
+  const res = await fetch(process.env.NEXT_API_URL + 'api/contact')
+
   const contact = await res.json()
   return {
       props: {
