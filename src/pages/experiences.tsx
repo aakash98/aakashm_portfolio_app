@@ -50,7 +50,8 @@ export default function Experiences() {
           <main className={styles.main}>
           <AnimatedText text="Experiences" className='!text-6xl' />
             <div className='w-[75%] mx-auto relative'>
-            <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+              <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">My Career</h2>
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
                   src="/ars.jpg"
