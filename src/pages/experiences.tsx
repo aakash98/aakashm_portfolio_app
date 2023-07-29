@@ -98,7 +98,6 @@ export default function Experiences() {
                   </div>  
               </div>  
             </div>
-          
           </main>
         </Layout>  
       </div>

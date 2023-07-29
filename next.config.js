@@ -7,7 +7,7 @@ const nextConfig = {
     experimental:{
         appDir: true,
     },
-    images: { domains: ["lemonsqueezy.imgix.net", "image.tmdb.org"] },
+    images: { domains: ["lemonsqueezy.imgix.net", "image.tmdb.org", "kaijeng.netlify.app"] },
 }
 
 
