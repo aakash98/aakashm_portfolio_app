@@ -10,7 +10,7 @@ import React from 'react';
 import {motion, useScroll} from "framer-motion"; 
 
 const netlifyImageLoader = ({ src }: {src: string}) => {
-  return `https://kaijeng.netlify.com/Content/img/${src}&q=${80}`
+  return `https://kaijeng.netlify.com/Content/img/${src}`
 }
 
 const FeaturedProject = ({year, title, summary, img, link, github}:
