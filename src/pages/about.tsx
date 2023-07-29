@@ -9,8 +9,8 @@ import { GithubSvg } from '@/components/Icons';
 import React from 'react';
 import {motion, useScroll} from "framer-motion"; 
 
-const netlifyImageLoader = ({ src, width, quality }: {src: string, width: string, quality: string}) => {
-  return `https://kaijeng.netlify.com/Content/img/${src}?w=${width}&q=${quality || 80}`
+const netlifyImageLoader = ({ src }: {src: string}) => {
+  return `https://kaijeng.netlify.com/Content/img/${src}&q=${80}`
 }
 
 const FeaturedProject = ({year, title, summary, img, link, github}:
@@ -103,6 +103,7 @@ export default function About() {
                   <p className='font-medium'>Hi, I am Kai Jeng, I am just another Software Engineer
 
                   </p>
+                  <br></br>
                   <div className="grid grid-cols-12 gap-24">
                     <div className="col-span-12">
                       <FeaturedProject 
