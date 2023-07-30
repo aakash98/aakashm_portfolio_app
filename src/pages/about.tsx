@@ -17,8 +17,10 @@ const FeaturedProject = ({year, title, summary, img, link, github}:
   {year: string, title: string, summary: string, img:string, link: string, github: string}) =>
   {
     return(
-      <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl">
-        <Link className='w-1/2 cursor-pointer overflow-hidden rounded-lg' href={link} target="_blank">
+      <article className="w-full flex items-center justify-between relative
+       rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
+       lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
+        <Link className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full' href={link} target="_blank">
         <Image    loader={netlifyImageLoader}
                   width={500}
                   height={500}
@@ -27,7 +29,7 @@ const FeaturedProject = ({year, title, summary, img, link, github}:
           ></Image>
         </Link>
   
-        <div className="w-1/2 flex flex-col items-start justify-between pl-6"> 
+        <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-6t lg:pt-6t"> 
           <Link href={link} target="_blank">
             <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
           </Link>     
@@ -63,13 +65,13 @@ const FeaturedProject = ({year, title, summary, img, link, github}:
     
           <div className="w-1/2 flex flex-col items-start justify-between mt-4"> 
             <Link href={link} target="_blank" className= "hover:underline underline-offset-2">
-              <h3 className='my-2 w-full text-left text-2xl font-bold'>{title}</h3>
+              <h3 className='my-2 w-full text-left text-2xl font-bold lg:text-2xl'>{title}</h3>
             </Link>
             <h4 className='text-primary font-medium text-xs'>{year}</h4>
             <p>{summary}</p> 
 
             <div className="w-full mt-2 flex items-center justify-between">
-              <Link href={link} target="_blank" className="text-lg font-semibold underline"> 
+              <Link href={link} target="_blank" className="highlight text-lg font-semibold underline md:text-base"> 
                 Visit Project
               </Link>
               {/* <Link href={github} target="_blank" className="ml-4text-lg font-semibold"> 
@@ -100,21 +102,24 @@ export default function About() {
                       <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Welcome to my portfolio!</h2>
                     </div>
                   </div>
-                  <p className='font-medium'>Hi, I am Kai Jeng, I am just another Software Engineer
-
+                  <p className='font-medium'>Hi, I am Kai Jeng, I am a Software Engineer
                   </p>
                   <br></br>
-                  <div className="grid grid-cols-12 gap-24">
+                  <p className='font-medium'>Below are some of my featured projects:
+                  </p>    
+                  <br></br>
+                  <div className="grid grid-cols-12 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                     <div className="col-span-12">
                       <FeaturedProject 
                       img="rwgenting.png"
                       title="Resords World"
-                      summary="CMS Project Collaborating with Adobe AEM"
+                      summary="CMS Project in collaboration with Adobe AEM"
                       link="https://www.rwgenting.com"
                       year="2022"
                       github="www.google.com"
                       />
-                    </div>
+                    </div>  
+
                     <div className="col-span-6">
                       <FeaturedSmallProject 
                         img="mrs.png"
@@ -129,7 +134,7 @@ export default function About() {
                       <FeaturedSmallProject 
                         img="gopay.png"
                         title="GoPayz"
-                        summary="ewallet"
+                        summary="financial e-wallet"
                         link="https://www.gopayz.com.my/"
                         year="2022"
                         github=""

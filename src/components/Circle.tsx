@@ -12,7 +12,7 @@ const Circle = () => {
             <svg width="100" height="100" viewBox='0 0 100 100'>
             <circle cx="75" cy="50" r="20" className='stroke-primary stroke-1 fill-none' />
             <motion.circle cx="75" cy="50" r="20" className='sstroke-[5px] fill-light' />
-            <circle cx="75" cy="50" r="20" className=' stroke-1 fill-primary' />
+            <circle cx="75" cy="50" r="20" className='stroke-1 fill-primary' />
             </svg>
         </figure>
     )
