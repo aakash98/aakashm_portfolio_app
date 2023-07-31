@@ -5,7 +5,7 @@ import { useUrl } from 'nextjs-current-url';
 
 const Footer = () => {
     const { href: currentUrl } = useUrl() ?? {};
-    const testurl = currentUrl?.split('//')[1].split('/')[0];
+    const testurl = currentUrl?.split('//')[1].split('/')[0].split('.')[0];
     return (
         <footer className='myfooter w-full border-t-2 border-solid border-dark font-medium text-lg'>
             <div className='py-8 flex items-center justify-between'>
