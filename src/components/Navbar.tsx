@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Logo from '../components/Logo';
 import {GithubSvg, LinkedInSvg} from './Icons';
 import {motion} from 'framer-motion';
@@ -8,43 +8,93 @@ import Circle from '@/components/Circle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCertificate} from '@fortawesome/free-solid-svg-icons';
 
-class Navbar extends Component {
+const Navbar = () => {
 
-  render () {
+    const [isOpen, setIsOpen] = useState(false);
+    const handleClick = () => {
+      setIsOpen(!isOpen)
+    }
+  
     return (
-      <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+      <header className='w-full px-32 py-8 font-medium flex items-center justify-between
+      dark:text-light relative'>
         
-      <nav>
-        <Link href="/" className='mr-4'>Home</Link>
-        <Link href="/about" className='mr-4'>About</Link>
-        <Link href="/contact" className='mr-4'>Contact</Link>
-        <Link href="/experiences" className='mr-4'>Experiences</Link>
-      </nav>
-      <Circle />
-      <Logo />
-      <nav className="flex items-center justify-center flex-wrap">
-        <motion.a href="https://github.com/KyleWong613" target={"_blank"}
-        whileHover={{y:-2}}
-        whileTap={{scale:0.9}}
-        className="w-6 mx-3">
-          <GithubSvg className='w-full' />
-        </motion.a>
-        <motion.a href="https://www.linkedin.com/in/wong-kai-jeng/" target={"_blank"}
-        whileHover={{y:-2}}
-        whileTap={{scale:0.9}}
-        className="w-6 ml-3">
-          <LinkedInSvg className='w-full' />
-        </motion.a>
-        <motion.a href="/certifications"
-        whileHover={{y:-2}}
-        whileTap={{scale:0.9}}
-        className="w-6 mx-3">
-          <FontAwesomeIcon icon={faCertificate} className="w-8 mx-3" />
-        </motion.a>
-      </nav>
+        {/* <button className='flex flex-col justify-center items-center' onClick={handleClick}>
+          <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}}`}></span>
+          <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}}`}></span>
+          <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}}`}></span>
+        </button> */}
+
+        <div className="w-full flex justify-between items-center lg:hidden">
+          <nav>
+            <Link href="/" className='mr-4'>Home</Link>
+            <Link href="/about" className='mr-4'>About</Link>
+            <Link href="/contact" className='mr-4'>Contact</Link>
+            <Link href="/experiences" className='mr-4'>Experiences</Link>
+          </nav>
+          <Circle />
+          <Logo />
+          <nav className="flex items-center justify-center flex-wrap">
+            <motion.a href="https://github.com/KyleWong613" target={"_blank"}
+            whileHover={{y:-2}}
+            whileTap={{scale:0.9}}
+            className="w-6 mx-3">
+              <GithubSvg className='w-full' />
+            </motion.a>
+            <motion.a href="https://www.linkedin.com/in/wong-kai-jeng/" target={"_blank"}
+            whileHover={{y:-2}}
+            whileTap={{scale:0.9}}
+            className="w-6 ml-3">
+              <LinkedInSvg className='w-full' />
+            </motion.a>
+            <motion.a href="/certifications"
+            whileHover={{y:-2}}
+            whileTap={{scale:0.9}}
+            className="w-6 mx-3">
+              <FontAwesomeIcon icon={faCertificate} className="w-8 mx-3" />
+            </motion.a>
+          </nav>
+        </div>
+
+        {/* Responsive Navbar */}
+        {
+          isOpen ? 
+          <div className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+          bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32">
+            <nav className="flex items-center flex-col justify-center">
+              <Link href="/" className='mr-4'>Home</Link>
+              <Link href="/about" className='mr-4'>About</Link>
+              <Link href="/contact" className='mr-4'>Contact</Link>
+              <Link href="/experiences" className='mr-4'>Experiences</Link>
+            </nav>
+            <nav className="flex items-center justify-center flex-wrap">
+              <motion.a href="https://github.com/KyleWong613" target={"_blank"}
+              whileHover={{y:-2}}
+              whileTap={{scale:0.9}}
+              className="w-6 mx-3">
+                <GithubSvg className='w-full' />
+              </motion.a>
+              <motion.a href="https://www.linkedin.com/in/wong-kai-jeng/" target={"_blank"}
+              whileHover={{y:-2}}
+              whileTap={{scale:0.9}}
+              className="w-6 ml-3">
+                <LinkedInSvg className='w-full' />
+              </motion.a>
+              <motion.a href="/certifications"
+              whileHover={{y:-2}}
+              whileTap={{scale:0.9}}
+              className="w-6 mx-3">
+                <FontAwesomeIcon icon={faCertificate} className="w-8 mx-3" />
+              </motion.a>
+            </nav>
+          </div>
+          : null
+        }
+       
+        
       </header>
         
     );
   }
-}
+
 export default Navbar
