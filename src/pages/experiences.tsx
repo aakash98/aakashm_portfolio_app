@@ -7,8 +7,10 @@ import {motion, useScroll} from "framer-motion";
 import '../app/globals.css';
 import { PositionType } from "@/util/ExperienceModel"
 import Layout from '@/components/Layout';
+import Link from 'next/link';
 
-const Details = ({position, company, companysite, time, work, work2, work3}:{position: string, company: string, companysite: string, time:string, work: string, work2: string, work3: string}) =>
+const Details = ({position, company, companysite, time, work, worklink, worklinkdesc, work2, work3}:
+  {position: string, company: string, companysite: string, time:string, work: string, worklink: string, worklinkdesc: string, work2: string, work3: string}) =>
 {
   return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
       <div>
@@ -18,7 +20,7 @@ const Details = ({position, company, companysite, time, work, work2, work3}:{pos
         <span className='capitalize font-medium text-dark'>
           {time}
         </span>
-        <p className='font-medium w-full'>{work}</p>
+        <p className='font-medium w-full'>{work}<Link className="highlight" href={worklink} target="_blank">{worklinkdesc}</Link></p>
         <p className='font-medium w-full'>{work2}</p>
         <p className='font-medium w-full'>{work3}</p>
       </div>
@@ -60,7 +62,9 @@ export default function Experiences() {
                   alt="ars"
                 />          
                 <Details position="Software Developer" company="Alpha Red Solutions" companysite="https://www.alphareds.com/" time="2019-2022" 
-                work="Maintaining Multiple CMS Applications Including Hotel/Travel Applications"
+                work="Maintaining Multiple CMS Applications Including Hotel/Travel Applications such as "
+                worklink= "https://www.mayflower.com.my/"
+                worklinkdesc= "Mayflower"
                 work2="Migration of a decade Legacy project in Collaboration with Adobe Experience Cloud"
                 work3="Kickoff of A universal e-wallet service In Collaboration with U Mobile"/>
             
@@ -72,7 +76,9 @@ export default function Experiences() {
                   alt="micron"
                 />          
                 <Details position="Software Engineer" company="Micron Technology" companysite="https://www.micron.com/" time="2022-Current"
-                work="Maintaining the Micron Backend Advanced Scheduler (BEMAS) Application which focusing on Planning and Scheduling"
+                work="Maintaining the Micron Backend Advanced Scheduler (BEMAS) Application focusing on Planning and "
+                worklink= "https://www.vms-solutions.com/en/solutions/optimized-scheduling.php"
+                worklinkdesc= "Optimized Scheduling"
                 work2="Migrating Applications from VMs to Cloud using Tools for Containerization such as Docker and Openshift"
                 work3="Migrating API Gateway from WSO2 to Apigee"/>
                 </div>
