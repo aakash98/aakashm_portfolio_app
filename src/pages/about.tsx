@@ -91,57 +91,55 @@ export default function About() {
         <meta name="description" content="about"></meta>
       </Head>
       <div className={styles.container}>
-        
         <main className={styles.main}>
-              <AnimatedText text="About Me" className='!text-6xl' />
-              <div className='w-[75%] mx-auto relative'>
-                <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-
-                  <div className="grid w-full grid-cols-8 gap-16">
-                    <div className="col-span-3 flex flex-col items-start justify-start">
-                      <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Welcome to my portfolio!</h2>
-                    </div>
-                  </div>
-                  <p className='font-medium'>Hi, I am Kai Jeng, I am a Software Engineer
-                  </p>
-                  <br></br>
-                  <p className='font-medium'>Below are some of my featured projects:
-                  </p>    
-                  <br></br>
-                  <div className="grid grid-cols-12 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-                    <div className="col-span-12">
-                      <FeaturedProject 
-                      img="rwgenting.png"
-                      title="Resords World"
-                      summary="CMS Project in collaboration with Adobe AEM"
-                      link="https://www.rwgenting.com"
-                      year="2022"
-                      github="www.google.com"
-                      />
-                    </div>  
-
-                    <div className="col-span-6">
-                      <FeaturedSmallProject 
-                        img="mrs.png"
-                        title="MrsEasy"
-                        summary="Food Ordering System"
-                        link="https://www.mrseasy.com"
-                        year="2021"
-                        github=""
-                        />
-                    </div>
-                    <div className="col-span-6">
-                      <FeaturedSmallProject 
-                        img="gopay.png"
-                        title="GoPayz"
-                        summary="financial e-wallet"
-                        link="https://www.gopayz.com.my/"
-                        year="2022"
-                        github=""
-                        />
-                    </div>
+            <AnimatedText text="About Me" className='!text-6xl' />
+            <div className='w-[75%] mx-auto relative'>
+              <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+                <div className="grid w-full grid-cols-8 gap-16">
+                  <div className="col-span-3 flex flex-col items-start justify-start">
+                    <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Welcome to my Portfolio!</h2>
                   </div>
                 </div>
+                <p className='font-medium'>Hi, I am Kai Jeng, I am a Software Engineer
+                </p>
+                <br></br>
+                <p className='font-medium'>Below are some of my featured projects:
+                </p>    
+                <br></br>
+                <div className="grid grid-cols-12 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+                  <div className="col-span-12">
+                    <FeaturedProject 
+                    img="rwgenting.png"
+                    title="Resords World"
+                    summary="CMS Project in collaboration with Adobe AEM"
+                    link="https://www.rwgenting.com"
+                    year="2022"
+                    github="www.google.com"
+                    />
+                  </div>  
+
+                  <div className="col-span-6">
+                    <FeaturedSmallProject 
+                      img="mrs.png"
+                      title="MrsEasy"
+                      summary="Food Ordering System"
+                      link="https://www.mrseasy.com"
+                      year="2021"
+                      github=""
+                      />
+                  </div>
+                  <div className="col-span-6">
+                    <FeaturedSmallProject 
+                      img="gopay.png"
+                      title="GoPayz"
+                      summary="financial e-wallet"
+                      link="https://www.gopayz.com.my/"
+                      year="2022"
+                      github=""
+                      />
+                  </div>
+                </div>
+              </div>
             </div>
         </main>
         <main className={styles.main}>

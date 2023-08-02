@@ -18,12 +18,12 @@ const Navbar = () => {
     return (
       <header className='w-full px-32 py-8 font-medium flex items-center justify-between
       dark:text-light relative'>
-        
-        {/* <button className='flex flex-col justify-center items-center' onClick={handleClick}>
-          <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}}`}></span>
-          <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}}`}></span>
-          <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}}`}></span>
-        </button> */}
+
+        <button className='flex-col justify-center hidden lg:flex items-center' onClick={handleClick}>
+          <span className={`block w-6 h-0.5 bg-gray-500  bg-dark dark:bg-light transition-all duration-300 ease-in  rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : 'translate-y-0.5'}}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-500 bg-dark dark:bg-light transition-all duration-300 ease-out  rounded-sm my-0.5 ${isOpen ? 'hidden' : 'opacity-100'}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-500 bg-dark dark:bg-light transition-all duration-300 ease-out  rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}}`}></span>
+        </button> 
 
         <div className="w-full flex justify-between items-center lg:hidden">
           <nav>
@@ -60,7 +60,7 @@ const Navbar = () => {
         {
           isOpen ? 
           <div className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32">
+          bg-dark/90 dark:bg-light/75 bg-white rounded-lg backdrop-blur-md py-32">
             <nav className="flex items-center flex-col justify-center">
               <Link href="/" className='mr-4'>Home</Link>
               <Link href="/about" className='mr-4'>About</Link>

@@ -27,7 +27,8 @@ const Details = ({position, company, companysite, time, work, worklink, worklink
     </li>
 }
 
-const EducationDetails = ({course, institution, time, sidecourse, sidecourse2, sidecourse3}:{course: string, institution: string, time:string, sidecourse: string, sidecourse2: string, sidecourse3: string}) =>
+const EducationDetails = ({course, institution, time, sidecourse, sidecourselink, sidecourse2, sidecourselink2, sidecourse3}:
+  {course: string, institution: string, time:string, sidecourse: string, sidecourselink: string, sidecourse2: string, sidecourselink2: string, sidecourse3: string}) =>
 {
   return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
       <div>
@@ -38,8 +39,8 @@ const EducationDetails = ({course, institution, time, sidecourse, sidecourse2, s
         <span className='capitalize font-medium text-dark'>
           {time}
         </span>
-        <p className='font-medium w-full'>{sidecourse}</p>
-        <p className='font-medium w-full'>{sidecourse2}</p>
+        <p className='font-medium w-full'><Link className="highlight" href={sidecourselink} target="_blank">{sidecourse}</Link></p>
+        <p className='font-medium w-full'><Link className="highlight" href={sidecourselink2} target="_blank">{sidecourse2}</Link></p>
       </div>
     </li>
 }
@@ -99,8 +100,10 @@ export default function Experiences() {
                     />          
                   <EducationDetails course="Bachelor of Computer Science" institution="Monash University" time="2015-2018" 
                   sidecourse="Data Analytics"
-                  sidecourse3="Modelling for Data Analysis"
-                  sidecourse2="Algorithms and Data Structures"/>
+                  sidecourselink="https://handbook.monash.edu/2021/units/FIT3152"
+                  sidecourselink2="https://handbook.monash.edu/2023/units/FIT2004"
+                  sidecourse2="Algorithms and Data Structures"
+                  sidecourse3="Modelling for Data Analysis"/>
                   </div>  
               </div>  
             </div>

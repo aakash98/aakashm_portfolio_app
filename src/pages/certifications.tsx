@@ -65,7 +65,6 @@ export default function Certifications() {
               </h3>
             </motion.a>
             </div>
-
           </div>
         </main>
       </div>
