@@ -48,7 +48,7 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
       <div className='layout'>
         <Head>
           <title>Kai Jeng | Contact</title>
-          <meta name="description" content="index"></meta>
+          <meta name="description" content="My personal Portfolio built with nextjs which showcases my career background and experiences"></meta>  
         </Head>
         <div className={styles.container}>
           <main className={styles.main}>

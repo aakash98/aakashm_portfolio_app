@@ -11,7 +11,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Kai Jeng | Sorting</title>
-        <meta name="description" content="index"></meta>
+        <meta name="description" content="My personal Portfolio built with nextjs which showcases my career background and experiences"></meta>  
       </Head>
       <main className={styles.main}>
         <AnimatedText text="Sorting Algorithms" className='!text-6xl' />

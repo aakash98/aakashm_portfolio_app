@@ -88,7 +88,7 @@ export default function About() {
     <div className='layout'>
       <Head>
         <title>Kai Jeng | About</title>
-        <meta name="description" content="about"></meta>
+        <meta name="description" content="My personal Portfolio built with nextjs which showcases my career background and experiences"></meta>  
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>

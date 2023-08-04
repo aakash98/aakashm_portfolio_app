@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => (
   <div className="layouthome">
   <Head>
     <title>Kai Jeng | Portfolio</title>
-    <meta name="description" content="index"></meta>
+    <meta name="description" content="My personal Portfolio built with nextjs which showcases my career background and experiences"></meta>  
     <Favicon/>
   </Head>
   {children}</div>
