@@ -106,7 +106,7 @@ export default function About() {
                 <p className='font-medium'>Below are some of my featured projects:
                 </p>    
                 <br></br>
-                <div className="grid grid-cols-12 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+                <div className="grid grid-cols-12 gap-y-32 gap-x-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                   <div className="col-span-12">
                     <FeaturedProject 
                     img="rwgenting.png"
@@ -118,7 +118,7 @@ export default function About() {
                     />
                   </div>  
 
-                  <div className="col-span-6">
+                  <div className="col-span-6 ">
                     <FeaturedSmallProject 
                       img="mrs.png"
                       title="MrsEasy"

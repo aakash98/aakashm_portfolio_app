@@ -51,7 +51,7 @@ const Navbar = () => {
             whileHover={{y:-2}}
             whileTap={{scale:0.9}}
             className="w-6 mx-3">
-              <FontAwesomeIcon icon={faCertificate} className="w-8 mx-3" />
+              <FontAwesomeIcon icon={faCertificate} className="fa-2rem w-8 mx-3" />
             </motion.a>
           </nav>
         </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
         {
           isOpen ? 
           <div className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          bg-dark/90 dark:bg-light/75 bg-white rounded-lg backdrop-blur-md py-32">
+          bg-dark/90 dark:bg-light/75 bg-white rounded-lg backdrop-blur-md py-32 z-50">
             <nav className="flex items-center flex-col justify-center">
               <Link href="/" className='mr-4'>Home</Link>
               <Link href="/about" className='mr-4'>About</Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
               <motion.a href="https://www.linkedin.com/in/wong-kai-jeng/" target={"_blank"}
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
-              className="w-6 ml-3">
+              className="w-6 mx-3">
                 <LinkedInSvg className='w-full' />
               </motion.a>
               <motion.a href="/certifications"

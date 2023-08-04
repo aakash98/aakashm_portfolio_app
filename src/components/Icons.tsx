@@ -2,8 +2,8 @@ import * as React from "react";
 export const GithubSvg = ({className, ...rest}:{className: string}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="2em"
+      height="2em"
       viewBox="0 0 512 512"
       className={` h-auto${className}`}
       {...rest}
@@ -19,8 +19,8 @@ export const GithubSvg = ({className, ...rest}:{className: string}) => (
 export const LinkedInSvg = ({className, ...rest}:{className: string}) => (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
+    width="2em"
+    height="2em"
     viewBox="0 0 256 256"
     className={`h-auto${className}`}
     {...rest}
