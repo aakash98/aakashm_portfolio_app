@@ -117,7 +117,6 @@ export default function About() {
                     github="www.google.com"
                     />
                   </div>  
-
                   <div className="col-span-6 ">
                     <FeaturedSmallProject 
                       img="mrs.png"

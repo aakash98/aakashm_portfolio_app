@@ -4,7 +4,7 @@ import AnimatedText from '@/components/AnimatedText';
 import {motion} from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import '../app/globals.css';
-import {GithubSvg, LinkedInSvg} from '../components/Icons';
+import {GithubSmallSvg, LinkedInSmallSvg} from '../components/Icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
@@ -65,7 +65,7 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
                             whileHover={{y:-2}}
                             whileTap={{scale:0.9}}
                             className="w-8 mx-3">
-                              <GithubSvg className='w-8 mx-3' />
+                              <GithubSmallSvg className='w-8 mx-3' />
                             </motion.a>
                             <motion.a className="github" href={contacts.github} target="_blank"
                               variants={fadein}
@@ -80,7 +80,7 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
                             whileHover={{y:-2}}
                             whileTap={{scale:0.9}}
                             className="w-8 mx-3">
-                              <LinkedInSvg className='w-8 mx-3' />
+                              <LinkedInSmallSvg className='w-8 mx-3' />
                             </motion.a> 
                             <motion.a className="linkedin" href={contacts.linkedin} target="_blank"
                             variants={fadein}
