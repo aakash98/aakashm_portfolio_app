@@ -7,6 +7,10 @@ const nextConfig = {
     experimental:{
         appDir: true,
     },
+    i18n: {
+        locales: ["en"],
+        defaultLocale: "en",
+      },
     images: { domains: ["lemonsqueezy.imgix.net", "image.tmdb.org", "kaijeng.netlify.app"] },
 }
 

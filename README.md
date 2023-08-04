@@ -1,4 +1,4 @@
-This is a Personal Portfolio built with [Next.js](https://nextjs.org/).
+This is My Portfolio built with [Next.js](https://nextjs.org/).
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## kj-next-app
 
-This NextJS Application consists of my about, contacts and some introduction to NextJS functionalities
+This is my NextJS Portfolio which is deployed on Vercel.
 
 Vercel URL: [KJ Next App](https://kaijeng-nextportfolio.vercel.app/)
 

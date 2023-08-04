@@ -13,8 +13,6 @@ const Footer = () => {
                 <span>Best viewed in Chrome, Safari, Firefox and Edge.</span>
             </div>
         </footer>
-       
-
     )
     
 }
