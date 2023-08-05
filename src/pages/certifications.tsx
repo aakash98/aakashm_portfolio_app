@@ -32,13 +32,18 @@ export default function Certifications() {
         <main className={styles.main}>
         <AnimatedText text="Certifications" className='!text-6xl' />
           <div className='w-[75%] mx-auto relative'>
-            <div className="absolute left-12 top-0 h-full bg-dark origin-top md:p-12">
+              <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+              <motion.a href={`${githuburl}`} target="_blank">
+                <h3 className=' mb-4 text-lg font-bold uppercase text-dark/75'>
+                  Certificates List
+                </h3>
+              </motion.a>
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
                   src="/iverson.jpg"
                   width={75}
                   height={75}
-                  alt="ars"
+                  alt="iverson"
                 />          
                 <CertDetails certname="Developing Cloud-Native Applications with Microservices Architectures" 
                 company="Iverson" certlink="https://imgbb.com/Np1jT65" 
@@ -56,15 +61,7 @@ export default function Certifications() {
                 date="Feb 2022"
                 details="Authoring concepts using the Adobe Experience Manager Touch UI"
                 details2="Creating and Editing responsive web pages with Experience Fragments"/>
-            </div>
-
-            <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-            <motion.a href={`${githuburl}`} target="_blank">
-              <h3 className='capitalize font-bold text-2xl'>
-                Certificates List
-              </h3>
-            </motion.a>
-            </div>
+             </div>
           </div>
         </main>
       </div>
