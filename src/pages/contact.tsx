@@ -55,7 +55,6 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
             <AnimatedText text="Contact Me" className='!text-6xl' />
                 <div className='w-[75%] mx-auto relative'>
                   <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-  
                     <div className="grid w-full grid-cols-8 gap-16">
                       <div className="col-span-3 flex flex-col items-start justify-start">
                         <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Get in Touch</h2>
@@ -107,14 +106,27 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
                             initial="initial"
                             animate="animate">{contacts.email}</motion.a>
                           </div>
+                          <br></br>
+                          <br></br>
+                          <div>
+                          <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Stats</h2>
+                          <div className="flex justify-between float-left -mt-4">
+                                <motion.a href={contacts.github} target={"_blank"}
+                                  whileHover={{y:-2}}
+                                  whileTap={{scale:0.9}}
+                                  className="w-8 mx-3 pt-6">
+                                <GithubSmallSvg className='w-8 mx-3' />
+                                </motion.a>
+                                <iframe className='' src="https://github-readme-stats.vercel.app/api?username=kylewong613&count_private=true&show_icons=true&hide=contribs,issues)](https://github.com/anuraghazra/github-readme-stats
+                                " title="github-frame"></iframe>
+                              </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                        
                 </div>
-            <div className="z-0 inline-block lg:p-16 sm:p-8">
-              
-            </div>
           </main>
         </div>
       </div>
