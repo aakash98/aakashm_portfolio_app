@@ -9,8 +9,9 @@ import { PositionType } from "@/util/ExperienceModel"
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 
-const Details = ({position, company, companysite, time, work, worklink, worklinkdesc, work2, work3}:
-  {position: string, company: string, companysite: string, time:string, work: string, worklink: string, worklinkdesc: string, work2: string, work3: string}) =>
+const Details = ({position, company, companysite, time, work, worklink, worklinkdesc, work2, worklink2, worklinkdesc2, work3}:
+  {position: string, company: string, companysite: string, time:string, work: string, worklink: string, worklinkdesc: string, 
+   work2: string, worklink2: string, worklinkdesc2: string, work3: string}) =>
 {
   return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
       <div>
@@ -21,7 +22,7 @@ const Details = ({position, company, companysite, time, work, worklink, worklink
           {time}
         </span>
         <p className='font-medium w-full'>{work}<Link className="highlight" href={worklink} target="_blank">{worklinkdesc}</Link></p>
-        <p className='font-medium w-full'>{work2}</p>
+        <p className='font-medium w-full'>{work2}<Link className="highlight" href={worklink} target="_blank">{worklinkdesc2}</Link></p>
         <p className='font-medium w-full'>{work3}</p>
       </div>
     </li>
@@ -66,7 +67,9 @@ export default function Experiences() {
                 work="Maintaining Multiple CMS Applications Including Hotel/Travel Applications such as "
                 worklink= "https://www.mayflower.com.my/"
                 worklinkdesc= "Mayflower"
-                work2="Migration of a decade Legacy project in Collaboration with Adobe Experience Cloud"
+                work2="Migration of a decade Legacy project in Collaboration with "
+                worklink2="https://business.adobe.com/"
+                worklinkdesc2= "Adobe Experience Cloud"
                 work3="Kickoff of A universal e-wallet service In Collaboration with U Mobile"/>
             
                 <Image
@@ -81,6 +84,8 @@ export default function Experiences() {
                 worklink= "https://www.vms-solutions.com/en/solutions/optimized-scheduling.php"
                 worklinkdesc= "Optimized Scheduling"
                 work2="Migrating Applications from VMs to Cloud using Tools for Containerization such as Docker and Openshift"
+                worklink2 = ""
+                worklinkdesc2=''
                 work3="Migrating API Gateway from WSO2 to Apigee"/>
                 </div>
             </div>

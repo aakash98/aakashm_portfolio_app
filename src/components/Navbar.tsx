@@ -60,14 +60,14 @@ const Navbar = () => {
         {
           isOpen ? 
           <div className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          bg-dark/90 dark:bg-light/75 bg-white rounded-lg backdrop-blur-md py-32 z-50">
+          bg-dark/90 border-2 border-zinc-400 hover:border-zinc-950 dark:bg-light/75 bg-white rounded-lg backdrop-blur-md py-32 z-50">
             <nav className="flex items-center flex-col justify-center">
               <Link href="/" className='mr-4'>Home</Link>
               <Link href="/about" className='mr-4'>About</Link>
               <Link href="/contact" className='mr-4'>Contact</Link>
               <Link href="/experiences" className='mr-4'>Experiences</Link>
             </nav>
-            <nav className="flex items-center justify-center flex-wrap">
+            <nav className="flex items-center justify-center flex-wrap pt-2 mr-4">
               <motion.a href="https://github.com/KyleWong613" target={"_blank"}
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
@@ -84,7 +84,7 @@ const Navbar = () => {
               whileHover={{y:-2}}
               whileTap={{scale:0.9}}
               className="w-6 mx-3">
-                <FontAwesomeIcon icon={faCertificate} className="w-8 mx-3" />
+              <FontAwesomeIcon icon={faCertificate} className="fa-2rem w-8 mx-3" />
               </motion.a>
             </nav>
           </div>

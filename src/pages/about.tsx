@@ -131,7 +131,7 @@ export default function About() {
                     <FeaturedSmallProject 
                       img="gopay.png"
                       title="GoPayz"
-                      summary="financial e-wallet"
+                      summary="Financial E-wallet"
                       link="https://www.gopayz.com.my/"
                       year="2022"
                       github=""
