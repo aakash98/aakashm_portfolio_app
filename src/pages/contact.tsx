@@ -52,7 +52,7 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
         </Head>
         <div className={styles.container}>
           <main className={styles.main}>
-            <AnimatedText text="Contact Me" className='!text-6xl' />
+            <AnimatedText text="Contact Me" className='dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
                 <div className='w-[75%] mx-auto relative'>
                   <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
                     <div className="grid w-full grid-cols-8 gap-16">
