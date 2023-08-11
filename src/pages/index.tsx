@@ -20,7 +20,7 @@ export default function Home() {
                               50vw"></Image>
             </div>
             <div className='w-1/2 flex flex-col items-center self-center'>
-              <AnimatedText text="Turning Ideas into Code" className='!text-6xl !text-left' />
+              <AnimatedText text="Turning Ideas into Code" className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
               <p>
                 As a Software Engineer, I am dedicated to turn ideas into creative web applications. Explore my projects and experiences, showcasing my various fields in Software Development.
               </p>
