@@ -90,10 +90,12 @@ export default function Experiences() {
                 </div>
             </div>
           </main>
+          <main className={styles.mainspace}>
 
+          </main>
           <main className={styles.main}>
-            <div className='my-10'>
-            <AnimatedText text="Education" className='!text-6xl' />
+            <div className='my-10 '>
+            <AnimatedText text="Education" className='dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
               <div className='w-[75%] mx-auto relative '>         
                 <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
                 <Image

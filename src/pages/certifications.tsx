@@ -30,7 +30,7 @@ export default function Certifications() {
     <div className=''>
       <div className={styles.container}>
         <main className={styles.main}>
-        <AnimatedText text="Certifications" className='!text-6xl' />
+        <AnimatedText text="Certifications" className='dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
           <div className='w-[75%] mx-auto relative'>
               <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
               <motion.a href={`${githuburl}`} target="_blank">
