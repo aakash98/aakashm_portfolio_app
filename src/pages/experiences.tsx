@@ -64,10 +64,10 @@ export default function Experiences() {
                   alt="ars"
                 />          
                 <Details position="Software Developer" company="Alpha Red Solutions" companysite="https://www.alphareds.com/" time="2019-2022" 
-                work="Maintaining Multiple CMS Applications Including Hotel/Travel Applications such as "
+                work="Frontend Development of e-commerce Hotel/Travel Booking Sites such as "
                 worklink= "https://www.mayflower.com.my/"
                 worklinkdesc= "Mayflower"
-                work2="Migration of a decade Legacy project in Collaboration with "
+                work2="Creating Core Components in Migration of the legacy CMS in collaboration with "
                 worklink2="https://business.adobe.com/"
                 worklinkdesc2= "Adobe Experience Cloud"
                 work3="Kickoff of A universal e-wallet service In Collaboration with U Mobile"/>

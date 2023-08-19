@@ -158,4 +158,12 @@
       width: 100%;
       flex-direction: column;
     }
+    .github-frame{
+      width: 100%;
+      flex-direction: column;
+    }
+    .contact-resp{
+      width: 100%;
+      flex-direction: column;
+    }
   }

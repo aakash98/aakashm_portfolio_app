@@ -53,9 +53,9 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
         <div className={styles.container}>
           <main className={styles.main}>
             <AnimatedText text="Contact Me" className='dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
-                <div className='w-[75%] mx-auto relative'>
+                <div className='w-[75%] mx-auto relative '>
                   <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-                    <div className="grid w-full grid-cols-8 gap-16">
+                    <div className="grid w-full gap-16 ">
                       <div className="col-span-3 flex flex-col items-start justify-start">
                         <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Get in Touch</h2>
                         <div className="z-0 inline-block ">
@@ -108,18 +108,18 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
                           </div>
                           <br></br>
                           <br></br>
-                          <div>
-                          <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Stats</h2>
-                          <div className="flex justify-between float-left -mt-4">
-                                <motion.a href={contacts.github} target={"_blank"}
-                                  whileHover={{y:-2}}
-                                  whileTap={{scale:0.9}}
-                                  className="w-8 mx-3 pt-6">
-                                <GithubSmallSvg className='w-8 mx-3' />
-                                </motion.a>
-                                <iframe className='' src="https://github-readme-stats.vercel.app/api?username=kylewong613&count_private=true&show_icons=true&hide=contribs,issues)](https://github.com/anuraghazra/github-readme-stats
-                                " title="github-frame"></iframe>
-                              </div>
+                          <div className="github-stats">
+                            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">Stats</h2>
+                            <div className="flex justify-between float-left -mt-4">
+                              <motion.a href={contacts.github} target={"_blank"}
+                                whileHover={{y:-2}}
+                                whileTap={{scale:0.9}}
+                                className="w-8 mx-3 pt-6">
+                              <GithubSmallSvg className='w-8 mx-3' />
+                              </motion.a>
+                              <iframe className='github-frame' src="https://github-readme-stats.vercel.app/api?username=kylewong613&count_private=true&show_icons=true&hide=contribs,issues)](https://github.com/anuraghazra/github-readme-stats
+                              " title="github-frame"></iframe>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -127,6 +127,8 @@ export default function Contact({contacts}: InferGetStaticPropsType<typeof getSt
                   </div>
                         
                 </div>
+
+                
           </main>
         </div>
       </div>
