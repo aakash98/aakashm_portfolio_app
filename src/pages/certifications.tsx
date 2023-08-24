@@ -51,7 +51,7 @@ const FeaturedProject = ({
         <Image
           width={500}
           height={500}
-          src={img}
+          src={hackfest_logo}
           alt={title}
           className="w-full h-auto"
         ></Image>
@@ -108,7 +108,71 @@ const FeaturedSmallProject = ({
         <Image
           width={350}
           height={350}
-          src={img}
+          src={csi_logo}
+          alt={title}
+          className="w-full h-auto"
+        ></Image>
+      </Link>
+
+      <div className="w-1/2 flex flex-col items-start justify-between mt-4">
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h3 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl">
+            {title}
+          </h3>
+        </Link>
+        <h4 className="text-primary font-medium text-xs">{year}</h4>
+        <p>{summary}</p>
+
+        <div className="w-full mt-2 flex items-center justify-between">
+          <Link
+            href={link}
+            target="_blank"
+            className="highlight text-lg font-semibold underline md:text-base"
+          >
+            Visit Org Website
+          </Link>
+          {/* <Link href={github} target="_blank" className="ml-4text-lg font-semibold"> 
+                <GithubSvg className='w-8 mx-3' />
+              </Link> */}
+        </div>
+      </div>
+    </article>
+  );
+};
+
+const FeaturedSmallProject1 = ({
+  year,
+  title,
+  summary,
+  img,
+  link,
+  github,
+}: {
+  year: string;
+  title: string;
+  summary: string;
+  img: string;
+  link: string;
+  github: string;
+}) => {
+  return (
+    <article
+      className="w-full flex flex-col items-center justify-center rounded-2xl 
+        border border-solid border-dark bg-light shadow-2xl p-6 relative"
+    >
+      <Link
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+        href={link}
+        target="_blank"
+      >
+        <Image
+          width={350}
+          height={350}
+          src={iitm_logo}
           alt={title}
           className="w-full h-auto"
         ></Image>
@@ -178,7 +242,7 @@ export default function Certifications() {
               <div className="grid grid-cols-12 gap-y-32 gap-x-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                 <div className="col-span-12">
                   <FeaturedProject
-                    img="/../public/hackfest22.jpeg"
+                    img=""
                     title="Hackfest 2022 - Winner"
                     summary="Designed Backend System For A Virtual Car Tour Product Aided With Google TTS Backed By Redis"
                     link="https://www.spinny.com/"
@@ -188,7 +252,7 @@ export default function Certifications() {
                 </div>
                 <div className="col-span-6 ">
                   <FeaturedSmallProject
-                    img="/../public/csi_winner.jpeg"
+                    img=""
                     title="CSI Semester Long Project - Winner"
                     summary="Designed A Fake News Detector Using NLP"
                     link="https://www.linkedin.com/in/aakash-mahadevan/overlay/1613158427611/single-media-viewer/?profileId=ACoAAB__0EkBFiQmrZNt6SrDVDGMKxJK0E-dcxc"
@@ -197,8 +261,8 @@ export default function Certifications() {
                   />
                 </div>
                 <div className="col-span-6">
-                  <FeaturedSmallProject
-                    img="/../public/IIT_Madras_Logo.svg.png"
+                  <FeaturedSmallProject1
+                    img=""
                     title="Conference Paper Accepted In ACCS 2019"
                     summary="Simulating Human Neurons With Data Science"
                     link="https://www.linkedin.com/in/aakash-mahadevan/overlay/1613158427611/single-media-viewer/?profileId=ACoAAB__0EkBFiQmrZNt6SrDVDGMKxJK0E-dcxc"
