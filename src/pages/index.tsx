@@ -88,7 +88,7 @@ export default function Home() {
           <h2>My Accomplishments</h2>
           <br />
           <p className="paragraph accent-text">
-            Go to this page to check out my Certifications
+            Go to this page to check out my Awards And Recognition
           </p>
         </Link>
 
