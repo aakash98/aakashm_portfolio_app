@@ -139,7 +139,7 @@ export default function Experiences() {
 
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
-                  src="/../public/hb_1.png"
+                  src="/hb_1.png"
                   width={50}
                   height={50}
                   alt="ars"
@@ -160,7 +160,7 @@ export default function Experiences() {
 
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
-                  src="/../public/IIT_Madras_Logo.svg.png"
+                  src="/IIT_Madras_Logo.svg.png"
                   width={50}
                   height={50}
                   alt="ars"
@@ -192,7 +192,7 @@ export default function Experiences() {
                 <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
                   <Image
                     className="my-8 first:mt-0 last:mb-0 flex-col"
-                    src="/../public/lnmiit.jpeg"
+                    src="/lnmiit.jpeg"
                     width={50}
                     height={50}
                     alt="monash"

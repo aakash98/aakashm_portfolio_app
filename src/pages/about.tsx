@@ -36,7 +36,7 @@ export default function About() {
             {/* Placeholder images */}
             <div className="logo-new">
               <Image
-                src="/../public/pythonlogo.png"
+                src="/pythonlogo.png"
                 alt="Logo 1"
                 width={80}
                 height={80}
@@ -44,7 +44,7 @@ export default function About() {
             </div>
             <div className="logo-new">
               <Image
-                src="/../public/djangologo.png"
+                src="/djangologo.png"
                 alt="Logo 1"
                 width={80}
                 height={100}
@@ -52,15 +52,18 @@ export default function About() {
             </div>
             <div className="logo-new">
               <Image
-                src="/../public/mysqllogo.png"
+                src="/mysqllogo.png"
                 alt="Logo 1"
                 width={120}
                 height={80}
               />
             </div>
             <div className="logo-new">
+              <Image src="/psqllogo.png" alt="Logo 1" width={80} height={80} />
+            </div>
+            <div className="logo-new">
               <Image
-                src="/../public/psqllogo.png"
+                src="/redis-favicon-144x144.png"
                 alt="Logo 1"
                 width={80}
                 height={80}
@@ -68,7 +71,7 @@ export default function About() {
             </div>
             <div className="logo-new">
               <Image
-                src="/../public/redis-favicon-144x144.png"
+                src="/elastic-elasticsearch-logo.png"
                 alt="Logo 1"
                 width={80}
                 height={80}
@@ -76,7 +79,7 @@ export default function About() {
             </div>
             <div className="logo-new">
               <Image
-                src="/../public/elastic-elasticsearch-logo.png"
+                src="/png-clipart-kafka-vertical-logo-tech-companies-thumbnail.png"
                 alt="Logo 1"
                 width={80}
                 height={80}
@@ -84,7 +87,7 @@ export default function About() {
             </div>
             <div className="logo-new">
               <Image
-                src="/../public/png-clipart-kafka-vertical-logo-tech-companies-thumbnail.png"
+                src="/png-clipart-nginx-phusion-passenger-load-balancing-docker-world-wide-web-angle-text-thumbnail.png"
                 alt="Logo 1"
                 width={80}
                 height={80}
@@ -92,15 +95,7 @@ export default function About() {
             </div>
             <div className="logo-new">
               <Image
-                src="/../public/png-clipart-nginx-phusion-passenger-load-balancing-docker-world-wide-web-angle-text-thumbnail.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
-            </div>
-            <div className="logo-new">
-              <Image
-                src="/../public/Amazon_Web_Services-Logo.wine.png"
+                src="/Amazon_Web_Services-Logo.wine.png"
                 alt="Logo 1"
                 width={80}
                 height={80}
