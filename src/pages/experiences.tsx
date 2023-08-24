@@ -1,121 +1,217 @@
-import Image from 'next/image';
-import Head from 'next/head';
-import AnimatedText from '@/components/AnimatedText'
-import styles from 'src/styles/Home.module.css';
-import React from 'react';
-import {motion, useScroll} from "framer-motion";
-import '../app/globals.css';
-import { PositionType } from "@/util/ExperienceModel"
-import Layout from '@/components/Layout';
-import Link from 'next/link';
+import Image from "next/image";
+import Head from "next/head";
+import AnimatedText from "@/components/AnimatedText";
+import styles from "src/styles/Home.module.css";
+import React from "react";
+import { motion, useScroll } from "framer-motion";
+import "../app/globals.css";
+import { PositionType } from "@/util/ExperienceModel";
+import Layout from "@/components/Layout";
+import Link from "next/link";
 
-const Details = ({position, company, companysite, time, work, worklink, worklinkdesc, work2, worklink2, worklinkdesc2, work3}:
-  {position: string, company: string, companysite: string, time:string, work: string, worklink: string, worklinkdesc: string, 
-   work2: string, worklink2: string, worklinkdesc2: string, work3: string}) =>
-{
-  return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
+const Details = ({
+  position,
+  company,
+  companysite,
+  time,
+  work,
+  worklink,
+  worklinkdesc,
+  work2,
+  worklink2,
+  worklinkdesc2,
+  work3,
+}: {
+  position: string;
+  company: string;
+  companysite: string;
+  time: string;
+  work: string;
+  worklink: string;
+  worklinkdesc: string;
+  work2: string;
+  worklink2: string;
+  worklinkdesc2: string;
+  work3: string;
+}) => {
+  return (
+    <li className="my-8 first:mt-0 last:mb-0 mx-auto flex flex-col">
       <div>
-        <h3 className='capitalize font-bold text-2xl'>
+        <h3 className="capitalize font-bold text-2xl">
           {position}&nbsp;<a href={companysite}>@{company}</a>
         </h3>
-        <span className='capitalize font-medium text-dark'>
-          {time}
-        </span>
-        <p className='font-medium w-full'>{work}<Link className="highlight" href={worklink} target="_blank">{worklinkdesc}</Link></p>
-        <p className='font-medium w-full'>{work2}<Link className="highlight" href={worklink} target="_blank">{worklinkdesc2}</Link></p>
-        <p className='font-medium w-full'>{work3}</p>
+        <span className="capitalize font-medium text-dark">{time}</span>
+        <p className="font-medium w-full">
+          {work}
+          <Link className="highlight" href={worklink} target="_blank">
+            {worklinkdesc}
+          </Link>
+        </p>
+        <p className="font-medium w-full">
+          {work2}
+          <Link className="highlight" href={worklink} target="_blank">
+            {worklinkdesc2}
+          </Link>
+        </p>
+        <p className="font-medium w-full">{work3}</p>
       </div>
     </li>
-}
+  );
+};
 
-const EducationDetails = ({course, institution, time, sidecourse, sidecourselink, sidecourse2, sidecourselink2, sidecourse3}:
-  {course: string, institution: string, time:string, sidecourse: string, sidecourselink: string, sidecourse2: string, sidecourselink2: string, sidecourse3: string}) =>
-{
-  return <li className='my-8 first:mt-0 last:mb-0 mx-auto flex flex-col'>
+const EducationDetails = ({
+  course,
+  institution,
+  time,
+  sidecourse,
+  sidecourselink,
+  sidecourse2,
+  sidecourselink2,
+  sidecourse3,
+}: {
+  course: string;
+  institution: string;
+  time: string;
+  sidecourse: string;
+  sidecourselink: string;
+  sidecourse2: string;
+  sidecourselink2: string;
+  sidecourse3: string;
+}) => {
+  return (
+    <li className="my-8 first:mt-0 last:mb-0 mx-auto flex flex-col">
       <div>
-        <h3 className='capitalize font-bold text-2xl'>
-          {course}&nbsp;<br>
-          </br>{institution}
+        <h3 className="capitalize font-bold text-2xl">
+          {course}&nbsp;<br></br>
+          {institution}
         </h3>
-        <span className='capitalize font-medium text-dark'>
-          {time}
-        </span>
-        <p className='font-medium w-full'><Link className="highlight" href={sidecourselink} target="_blank">{sidecourse}</Link></p>
-        <p className='font-medium w-full'><Link className="highlight" href={sidecourselink2} target="_blank">{sidecourse2}</Link></p>
+        <span className="capitalize font-medium text-dark">{time}</span>
+        <p className="font-medium w-full">
+          <Link className="highlight" href={sidecourselink} target="_blank">
+            {sidecourse}
+          </Link>
+        </p>
+        <p className="font-medium w-full">
+          <Link className="highlight" href={sidecourselink2} target="_blank">
+            {sidecourse2}
+          </Link>
+        </p>
       </div>
     </li>
-}
+  );
+};
 
 export default function Experiences() {
   return (
-    <div className=''>
+    <div className="">
       <div className={styles.container}>
-        <Layout>  
+        <Layout>
           <main className={styles.main}>
-          <AnimatedText text="Experiences" className='dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
-            <div className='w-[75%] mx-auto relative'>
+            <AnimatedText
+              text="Experience"
+              className="dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl"
+            />
+            <div className="w-[75%] mx-auto relative">
               <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">My Career</h2>
+                <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+                  My Career
+                </h2>
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
-                  src="/ars.jpg"
+                  src="/spinny.webp"
                   width={50}
                   height={50}
                   alt="ars"
-                />          
-                <Details position="Software Developer" company="Alpha Red Solutions" companysite="https://www.alphareds.com/" time="2019-2022" 
-                work="Frontend Development of e-commerce Hotel/Travel Booking Sites such as "
-                worklink= "https://www.mayflower.com.my/"
-                worklinkdesc= "Mayflower"
-                work2="Creating Core Components in Migration of the legacy CMS in collaboration with "
-                worklink2="https://business.adobe.com/"
-                worklinkdesc2= "Adobe Experience Cloud"
-                work3="Kickoff of A universal e-wallet service In Collaboration with U Mobile"/>
-            
+                />
+                <Details
+                  position="Software Engineer 2"
+                  company="Spinny"
+                  companysite="https://www.spinny.com/"
+                  time="2021-Current"
+                  work="Platform Engineer And Pricing & Auth Service Team Lead "
+                  worklink="https://www.spinny.com/sell-used-car/"
+                  worklinkdesc="Pricing Calculator"
+                  work2="Created Inventory Service Which Manages Listings And Car Meta Details "
+                  worklink2="https://www.spinny.com/max/used-cars-in-mumbai/s/"
+                  worklinkdesc2=" Sample Listing Page"
+                  work3="Created Customized Batch Processing Consumers For SQS, Kafka And Configured Autoscaling For Them"
+                />
+
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
-                  src="/micron.png"
-                  width={75}
-                  height={75}
-                  alt="micron"
-                />          
-                <Details position="Software Engineer" company="Micron Technology" companysite="https://www.micron.com/" time="2022-Current"
-                work="Maintaining the Micron Backend Advanced Scheduler (BEMAS) Application focusing on Planning and "
-                worklink= "https://www.vms-solutions.com/en/solutions/optimized-scheduling.php"
-                worklinkdesc= "Optimized Scheduling"
-                work2="Migrating Applications from VMs to Cloud using Tools for Containerization such as Docker and Openshift"
-                worklink2 = ""
-                worklinkdesc2=''
-                work3="Migrating API Gateway from WSO2 to Apigee"/>
-                </div>
-            </div>
-          </main>
-          <main className={styles.mainspace}>
+                  src="/../public/hb_1.png"
+                  width={50}
+                  height={50}
+                  alt="ars"
+                />
+                <Details
+                  position="Software Engineer"
+                  company="Hungerbox"
+                  companysite="https://www.hungerbox.com/"
+                  time="2020-2021"
+                  work="Worked In The Ordering System Overhaul Which Was Used By 500k customers every day"
+                  worklink=""
+                  worklinkdesc=""
+                  work2="Developed Global Food Menu Search By Setting Up Data Pipelines Using CRONs And Indexed With Elasticsearch"
+                  worklink2=""
+                  worklinkdesc2=""
+                  work3="Developed Notification Module Based On Configurable Handlers With FCM, Kaleyra, Webengage"
+                />
 
-          </main>
-          <main className={styles.main}>
-            <div className='my-10 '>
-            <AnimatedText text="Education" className='dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl' />
-              <div className='w-[75%] mx-auto relative '>         
-                <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
                 <Image
-                      className="my-8 first:mt-0 last:mb-0 flex-col"
-                      src="/monash.png"
-                      width={50}
-                      height={50}
-                      alt="monash"
-                    />          
-                  <EducationDetails course="Bachelor of Computer Science" institution="Monash University" time="2015-2018" 
-                  sidecourse="Data Analytics"
-                  sidecourselink="https://handbook.monash.edu/2021/units/FIT3152"
-                  sidecourselink2="https://handbook.monash.edu/2023/units/FIT2004"
-                  sidecourse2="Algorithms and Data Structures"
-                  sidecourse3="Modelling for Data Analysis"/>
-                  </div>  
-              </div>  
+                  className="my-8 first:mt-0 last:mb-0 flex-col"
+                  src="/../public/IIT_Madras_Logo.svg.png"
+                  width={50}
+                  height={50}
+                  alt="ars"
+                />
+                <Details
+                  position="Research Intern"
+                  company="IIT Madras - Computational Neuroscience Lab"
+                  companysite="https://biotech.iitm.ac.in/Faculty/CNS_LAB/home.html"
+                  time="2019"
+                  work="Ascertained The Presence Of Object Vector Cells Which Was Published In The ACCS 2019 Conference: "
+                  worklink="https://www.linkedin.com/in/aakash-mahadevan/overlay/1613158427611/single-media-viewer/?profileId=ACoAAB__0EkBFiQmrZNt6SrDVDGMKxJK0E-dcxc"
+                  worklinkdesc="Conference Paper"
+                  work2="Optimized The Anti-Hebbian Model Training Time By 50%"
+                  worklink2=""
+                  worklinkdesc2=""
+                  work3="Parameter Tuning And Simulation Engine (Anti-Hebbian Model) Development"
+                />
+              </div>
             </div>
           </main>
-        </Layout>  
+          <main className={styles.mainspace}></main>
+          <main className={styles.main}>
+            <div className="my-10 ">
+              <AnimatedText
+                text="Education"
+                className="dark:text-light text-8xl font-bold w-full capitalize !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl"
+              />
+              <div className="w-[75%] mx-auto relative ">
+                <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
+                  <Image
+                    className="my-8 first:mt-0 last:mb-0 flex-col"
+                    src="/../public/lnmiit.jpeg"
+                    width={50}
+                    height={50}
+                    alt="monash"
+                  />
+                  <EducationDetails
+                    course="Bachelor Of Technology In Communications And Computer Engineering"
+                    institution="The LNM Institue Of Information Technology, Jaipur"
+                    time="2016-2020"
+                    sidecourse="CGPA 7.4/10"
+                    sidecourselink=""
+                    sidecourselink2=""
+                    sidecourse2=""
+                    sidecourse3=""
+                  />
+                </div>
+              </div>
+            </div>
+          </main>
+        </Layout>
       </div>
     </div>
   );
