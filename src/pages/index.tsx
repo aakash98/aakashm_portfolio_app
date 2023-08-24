@@ -45,7 +45,7 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-2">
                 <Link
-                  href="/AakashMResume_Template.pdf"
+                  href="/aakash_mahadevan_portfolio.pdf"
                   target={"blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6
                 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark

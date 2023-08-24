@@ -8,6 +8,9 @@ import "../app/globals.css";
 import { PositionType } from "@/util/ExperienceModel";
 import Layout from "@/components/Layout";
 import Link from "next/link";
+import hb_logo from "/public/hb_1.png";
+import iitm_logo from "/public/IIT_Madras_Logo.svg.png";
+import lnmiit_logo from "/public/lnmiit.jpeg";
 
 const Details = ({
   position,
@@ -139,7 +142,7 @@ export default function Experiences() {
 
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
-                  src="/hb_1.png"
+                  src={hb_logo}
                   width={50}
                   height={50}
                   alt="ars"
@@ -160,7 +163,7 @@ export default function Experiences() {
 
                 <Image
                   className="my-8 first:mt-0 last:mb-0 flex-col"
-                  src="/IIT_Madras_Logo.svg.png"
+                  src={iitm_logo}
                   width={50}
                   height={50}
                   alt="ars"
@@ -192,7 +195,7 @@ export default function Experiences() {
                 <div className="absolute left-12 top-0 h-full bg-dark origin-top ">
                   <Image
                     className="my-8 first:mt-0 last:mb-0 flex-col"
-                    src="/lnmiit.jpeg"
+                    src={lnmiit_logo}
                     width={50}
                     height={50}
                     alt="monash"

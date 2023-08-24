@@ -8,6 +8,9 @@ import Layout from "@/components/Layout";
 import { GithubSvg } from "@/components/Icons";
 import React from "react";
 import { motion, useScroll } from "framer-motion";
+import csi_logo from "/../public/csi.png";
+import iitm_logo from "/../public/IIT_Madras_Logo.svg.png";
+import hackfest_logo from "/../public/hackfest22.jpeg";
 
 const img_json = {
   hackfest22: "ngZZwHy",
@@ -175,7 +178,7 @@ export default function Certifications() {
               <div className="grid grid-cols-12 gap-y-32 gap-x-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                 <div className="col-span-12">
                   <FeaturedProject
-                    img="/hackfest22.jpeg"
+                    img="/../public/hackfest22.jpeg"
                     title="Hackfest 2022 - Winner"
                     summary="Designed Backend System For A Virtual Car Tour Product Aided With Google TTS Backed By Redis"
                     link="https://www.spinny.com/"
@@ -185,7 +188,7 @@ export default function Certifications() {
                 </div>
                 <div className="col-span-6 ">
                   <FeaturedSmallProject
-                    img="/csi.png"
+                    img="/../public/csi.png"
                     title="CSI Semester Long Project - Winner"
                     summary="Designed A Fake News Detector Using NLP"
                     link="https://www.linkedin.com/in/aakash-mahadevan/overlay/1613158427611/single-media-viewer/?profileId=ACoAAB__0EkBFiQmrZNt6SrDVDGMKxJK0E-dcxc"
@@ -195,7 +198,7 @@ export default function Certifications() {
                 </div>
                 <div className="col-span-6">
                   <FeaturedSmallProject
-                    img="/IIT_Madras_Logo.svg.png"
+                    img="/../public/csi.png"
                     title="Conference Paper Accepted In ACCS 2019"
                     summary="Simulating Human Neurons With Data Science"
                     link="https://www.linkedin.com/in/aakash-mahadevan/overlay/1613158427611/single-media-viewer/?profileId=ACoAAB__0EkBFiQmrZNt6SrDVDGMKxJK0E-dcxc"

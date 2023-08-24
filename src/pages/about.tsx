@@ -6,6 +6,14 @@ import React from "react";
 import { motion, useScroll } from "framer-motion";
 import "../app/globals.css";
 import exp from "constants";
+import python_logo from "/public/pythonlogo.png";
+import django_logo from "/public/djangologo.png";
+import mysql_logo from "/public/mysqllogo.png";
+import redis_logo from "/public/redis-favicon-144x144.png";
+import es_logo from "/public/elastic-elasticsearch-logo.png";
+import kafka_logo from "/public/png-clipart-kafka-vertical-logo-tech-companies-thumbnail.png";
+import ngx_logo from "/public/png-clipart-nginx-phusion-passenger-load-balancing-docker-world-wide-web-angle-text-thumbnail.png";
+import aws_logo from "/public/Amazon_Web_Services-Logo.wine.png";
 
 export default function About() {
   return (
@@ -35,71 +43,31 @@ export default function About() {
           <div className="logoGrid">
             {/* Placeholder images */}
             <div className="logo-new">
-              <Image
-                src="/pythonlogo.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
+              <Image src={python_logo} alt="Logo 1" width={80} height={80} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/djangologo.png"
-                alt="Logo 1"
-                width={80}
-                height={100}
-              />
+              <Image src={django_logo} alt="Logo 1" width={80} height={100} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/mysqllogo.png"
-                alt="Logo 1"
-                width={120}
-                height={80}
-              />
+              <Image src={mysql_logo} alt="Logo 1" width={120} height={80} />
             </div>
             <div className="logo-new">
               <Image src="/psqllogo.png" alt="Logo 1" width={80} height={80} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/redis-favicon-144x144.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
+              <Image src={redis_logo} alt="Logo 1" width={80} height={80} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/elastic-elasticsearch-logo.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
+              <Image src={es_logo} alt="Logo 1" width={80} height={80} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/png-clipart-kafka-vertical-logo-tech-companies-thumbnail.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
+              <Image src={kafka_logo} alt="Logo 1" width={80} height={80} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/png-clipart-nginx-phusion-passenger-load-balancing-docker-world-wide-web-angle-text-thumbnail.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
+              <Image src={ngx_logo} alt="Logo 1" width={80} height={80} />
             </div>
             <div className="logo-new">
-              <Image
-                src="/Amazon_Web_Services-Logo.wine.png"
-                alt="Logo 1"
-                width={80}
-                height={80}
-              />
+              <Image src={aws_logo} alt="Logo 1" width={80} height={80} />
             </div>
           </div>
         </div>
